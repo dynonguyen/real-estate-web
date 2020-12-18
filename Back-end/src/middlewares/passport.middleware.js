@@ -1,7 +1,7 @@
 const passport = require('passport');
 const GooglePlusTokenStrategy = require('passport-google-token').Strategy;
-const AccountModel = require('../models/account.models/account.model');
-const UserModel = require('../models/account.models/user.model');
+const AccountModel = require('../models/accounts/account.model');
+const UserModel = require('../models/accounts/user.model');
 const jwt = require('jsonwebtoken');
 
 //authentication with JWT

@@ -8,6 +8,7 @@ const userSchema = new Schema({
   birthday: { type: String, default: '1970-01-01' },
   // true: male
   gender: { type: Boolean, required: true, default: true },
+  phone: { type: String, trim: true, default: '' },
   address: { type: String, trim: true, default: null },
   avt: { type: String, default: '' },
 });

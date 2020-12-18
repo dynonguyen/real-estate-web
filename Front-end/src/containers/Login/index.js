@@ -15,8 +15,8 @@ import { FastField, Form, Formik } from 'formik';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link, Redirect } from 'react-router-dom';
-import * as Yup from 'yup';
 import authReducers from 'reducers/auth';
+import * as Yup from 'yup';
 import './index.scss';
 
 function Login() {

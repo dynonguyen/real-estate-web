@@ -2,6 +2,7 @@
 import 'antd/dist/antd.css';
 import 'commons/utils/index.scss';
 import GlobalLoading from 'components/GlobalLoading';
+import HeaderView from 'components/HeaderView';
 //configuration
 import 'configs/message.config';
 import routesConfig from 'configs/routesConfig';
@@ -18,6 +19,7 @@ function App() {
       <Suspense fallback={<GlobalLoading />}>
         <div className="App" id="app">
           <Switch>
+            <HeaderView />
             {renderRoutes(routes)}
             <Route>
               <h1>Not found</h1>

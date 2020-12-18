@@ -1,0 +1,80 @@
+@import "commons/variables/color.scss";
+
+.header-view {
+  &-wrapper {
+    background-color: $bg-color-primary;
+  }
+  height: 64px;
+
+  .logo {
+    flex-basis: 154px;
+    img {
+      max-width: 100%;
+      max-height: 28px;
+    }
+    &--sm {
+      display: none;
+    }
+  }
+
+  .navbar {
+    flex-grow: 1;
+    li {
+      color: $text-color-primary;
+      font-size: 16px;
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+      &:hover,
+      &:active {
+        color: #f5b070;
+        transition: all 0.35s;
+      }
+    }
+    padding-left: 32px;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .header-view {
+    .action {
+      display: none;
+    }
+    .menu-icon {
+      display: block;
+      font-size: 24px;
+      color: $text-color-primary;
+      &:hover {
+        transform: scale(1.15);
+        transition: all 0.35s;
+        color: #f5b070;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .header-view {
+    .logo {
+      flex-basis: 50px;
+      &--lg {
+        display: none;
+      }
+      &--sm {
+        display: block;
+      }
+    }
+    .navbar {
+      padding: 8px;
+      li {
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -60,6 +60,7 @@ const hireMenu = generateMenuDropdown(constants.HIRE_HOUSE_MENU);
 function HeaderView() {
   const { isAuth } = useSelector((state) => state.authenticate);
   const user = useSelector((state) => state.user);
+  console.log(isAuth, user);
 
   return (
     <div className="container-fluid header-view-wrapper">

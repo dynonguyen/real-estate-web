@@ -11,6 +11,9 @@ const path = require('path');
 // ! import local file
 const corsConfig = require('./src/configs/cors.config');
 const constants = require('./src/constants');
+const accountApi = require('./src/apis/account.api');
+const userApi = require('./src/apis/user.api');
+const loginApi = require('./src/apis/login.api');
 
 // ! ================== set port ================== //
 const app = express();
@@ -53,3 +56,14 @@ app.listen(PORT, () => {
 });
 
 // ! ================== Routes - Api ================== //
+// api trang admin
+// app.use('/admin', adminApi);
+
+// api liên quan đến account
+app.use('/accounts', accountApi);
+
+// api liên quan user
+app.use('/user', userApi);
+
+// api liên quan đến login
+app.use('/login', loginApi);

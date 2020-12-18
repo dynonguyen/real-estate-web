@@ -86,6 +86,7 @@ function SignUp() {
     password: '',
     confirmPassword: '',
     fullName: '',
+    phone: '',
     address: '',
     gender: null,
   };
@@ -132,6 +133,11 @@ function SignUp() {
         `* Tuổi tối thiểu là ${constants.MIN_AGE}`,
       ),
     gender: Yup.boolean().required('* Giới tính của bạn'),
+    phone: Yup.string()
+      .trim()
+      .matches(/^(\d+)/, '* Sđt phải là một con số')
+      .min(8, '* Sđt ít nhất 8 số')
+      .max(11, '* Sđt có nhiều nhất 11 số'),
     address: Yup.string()
       .trim()
       .max(100, '* Tối đa 100 ký tự'),
@@ -285,6 +291,23 @@ function SignUp() {
                         component={SelectField}
                         placeholder="Giới tính *"
                         options={constants.GENDER_OPTIONS}
+                      />
+                    </Col>
+                    <Col span={24}>
+                      {/* phone number filed */}
+                      <FastField
+                        name="phone"
+                        component={InputField}
+                        className="input-form-common"
+                        placeholder="Số điện thoại"
+                        size="large"
+                        suffix={
+                          <Tooltip title="Sđt có 10 hoặc 11 ký tự">
+                            <InfoCircleOutlined
+                              style={{ color: suffixColor }}
+                            />
+                          </Tooltip>
+                        }
                       />
                     </Col>
                     <Col span={24}>

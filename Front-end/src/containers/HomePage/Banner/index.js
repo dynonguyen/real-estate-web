@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Carousel } from 'antd';
 import React from 'react';
 import './index.scss';
@@ -9,17 +10,8 @@ import bannerImg_5 from 'assets/imgs/banner-5.jpg';
 import bannerImg_6 from 'assets/imgs/banner-6.jpg';
 import bannerImg_7 from 'assets/imgs/banner-6.jpg';
 
-const list = [
-  bannerImg,
-  bannerImg_2,
-  bannerImg_3,
-  bannerImg_4,
-  bannerImg_5,
-  bannerImg_6,
-  bannerImg_7,
-];
-
-function Banner() {
+function Banner(props) {
+  const { list } = props;
   return (
     <Carousel autoplay>
       {list.map((item, index) => (
@@ -32,5 +24,21 @@ function Banner() {
     </Carousel>
   );
 }
+
+Banner.defaultProps = {
+  list: [
+    bannerImg,
+    bannerImg_2,
+    bannerImg_3,
+    bannerImg_4,
+    bannerImg_5,
+    bannerImg_6,
+    bannerImg_7,
+  ],
+};
+
+Banner.propTypes = {
+  list: PropTypes.array,
+};
 
 export default Banner;

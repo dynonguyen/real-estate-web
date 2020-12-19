@@ -1,0 +1,16 @@
+.home-view {
+  .ant-card-body {
+    padding: 12px;
+  }
+  &-title {
+    color: #3fa8ff;
+  }
+  &-price {
+    background-color: #f74a27;
+    color: #fff;
+  }
+  &-address {
+    color: #aaa;
+    font-weight: bold;
+  }
+}

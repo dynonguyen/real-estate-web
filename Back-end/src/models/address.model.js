@@ -26,7 +26,7 @@ const addressSchema = new Schema({
           prefix: { type: String, required: true, trim: true },
         },
       ],
-      street: [
+      streets: [
         {
           id: { type: String, required: true, unique: true },
           name: { type: String, required: true, trim: true },

@@ -1,7 +1,8 @@
 const VerifyModel = require('../models/accounts/verify.model');
 const constants = require('../constants/index');
+const AddressModel = require('../models/address.model');
 
-//fn: tạo mã xác thực
+// fn: tạo mã xác thực
 const generateVerifyCode = (numberOfDigits) => {
   //random một số từ 1 -> 10^numberOfDigits
   const n = parseInt(numberOfDigits);
@@ -14,7 +15,7 @@ const generateVerifyCode = (numberOfDigits) => {
   return numberStr;
 };
 
-//fn: kiểm tra mã xác thực
+// fn: kiểm tra mã xác thực
 const isVerifyEmail = async (email, verifyCode) => {
   try {
     const res = await VerifyModel.findOne({ email });
@@ -34,7 +35,48 @@ const isVerifyEmail = async (email, verifyCode) => {
   }
 };
 
+// fn: chuyển address id thành address string
+const convertAddress = async (address) => {
+  try {
+    let result = '';
+    const { province, district, wards, street, details } = address;
+    const data = await AddressModel.findOne({ id: province });
+    if (data) {
+      const { districts } = data;
+      const proName = data.name;
+
+      const dis = districts.find((item) => (item.id = district));
+
+      if (dis) {
+        const disName = dis ? dis.name : '';
+
+        const ward = dis.wards.find((item) => (item.id = wards));
+        const wName = ward.prefix + ' ' + ward.name;
+
+        const s = dis.streets
+          ? dis.streets.find((item) => (item.id = street))
+          : null;
+        const sName = s ? s.prefix + ' ' + s.name : '';
+        result =
+          details +
+          ', ' +
+          sName +
+          ', ' +
+          wName +
+          ', ' +
+          disName +
+          ', ' +
+          proName;
+      }
+    }
+    return result;
+  } catch (error) {
+    return '';
+  }
+};
+
 module.exports = {
   generateVerifyCode,
   isVerifyEmail,
+  convertAddress,
 };

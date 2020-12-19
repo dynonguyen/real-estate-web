@@ -18,6 +18,9 @@ const postSchema = new Schema({
   // ngày kết thúc
   end: { type: Date, required: true, default: Date.now() },
 
+  // những bức ảnh khác của nhà
+  catalogs: { type: [String], default: [] },
+
   // nội dung chi tiết bài đăng
   content: { type: String, default: '' },
 });

@@ -4,6 +4,7 @@ const ROUTES = {
   LOGIN: '/login',
   SIGNUP: '/signup',
   FORGOT_PASSWORD: '/login/forgot-pw',
+  HOUSE: '/house',
 };
 
 // menu nhà bán trên navbar
@@ -56,7 +57,9 @@ const REAL_ESTATE_TYPES = [
   { type: 5, title: 'Căn hộ Penthouse' },
   { type: 6, title: 'Nhà biệt thự' },
   { type: 7, title: 'Đất nền' },
-  { type: 8, title: 'Bất động sản khác' },
+  { type: 8, title: 'Nhà riêng' },
+  { type: 9, title: 'Văn phòng' },
+  { type: 10, title: 'Bất động sản khác' },
 ];
 
 // Các loại giá theo mức giá bán

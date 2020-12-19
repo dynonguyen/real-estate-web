@@ -3,6 +3,10 @@
 .header-view {
   &-wrapper {
     background-color: $bg-color-primary;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
   }
   height: 64px;
 

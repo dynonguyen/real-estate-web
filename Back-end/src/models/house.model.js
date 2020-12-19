@@ -6,6 +6,9 @@ const houseSchema = new Schema({
   // chủ nhà là FK của user
   host: { type: Schema.Types.ObjectId, required: true },
 
+  // ảnh đại diện của nhà
+  avt: { type: String, default: '' },
+
   // tiêu đề của nhà
   title: { type: String, required: true, trim: true, maxlength: 1000 },
 
@@ -13,7 +16,7 @@ const houseSchema = new Schema({
   isHire: { type: Boolean, required: true, default: true },
 
   // loại bất động sản (Chuyển đổi xem trong thư mục helpers)
-  type: { type: Number, enum: [...Array(10).keys()], default: 0 },
+  type: { type: Number, enum: [...Array(11).keys()], default: 0 },
 
   // giá (nếu nhà bán: tính theo tỉ (triệu), thuê (triệu/tháng))
   price: { type: Number, required: true, default: 0 },
@@ -23,16 +26,16 @@ const houseSchema = new Schema({
 
   // địa chỉ (mảng các id tỉnh thành cụ thể)
   address: {
-    type: Array,
-    required,
+    type: Object,
+    required: true,
     province: String,
     district: String,
     wards: String,
     street: String,
-    details: String,
+    details: { type: String, default: '' },
   },
 });
 
-const HouseModel = mongoose.model('house', houseSchema, 'houses');
+const HouseModel = mongoose.model('house', houseSchema, 'house');
 
 module.exports = HouseModel;

@@ -1,3 +1,4 @@
+import HomePage from 'containers/HomePage';
 import constants from 'constants/index.js';
 import React from 'react';
 import { Route } from 'react-router-dom';
@@ -11,7 +12,7 @@ const routes = [
   {
     path: constants.ROUTES.HOME,
     exact: true,
-    main: () => <h1>Hello</h1>,
+    main: () => <HomePage />,
   },
   {
     path: constants.ROUTES.FORGOT_PASSWORD,

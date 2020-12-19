@@ -37,6 +37,7 @@ if (!dev) {
 
 // ! ================== Connect mongodb with mongoose ================== //
 const mongoose = require('mongoose');
+const addressApi = require('./src/apis/address.api');
 const MONGO_URL = dev ? process.env.MONGO_URL_LOCAL : process.env.MONGO_URL;
 mongoose.connect(MONGO_URL, {
   useUnifiedTopology: true,
@@ -67,3 +68,6 @@ app.use('/user', userApi);
 
 // api liên quan đến login
 app.use('/login', loginApi);
+
+// api liên quan đến address
+app.use('/address', addressApi);

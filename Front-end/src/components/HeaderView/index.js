@@ -11,35 +11,8 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import constants from 'constants/index';
+import helpers from 'helpers';
 import './index.scss';
-
-// action menu cho dropdown
-const actionMenu = (
-  <Menu className="m-t-18 bor-rad-8">
-    <Menu.Item>
-      <Button className="bor-rad-6 w-100">
-        Đăng tin
-        <EditOutlined />
-      </Button>
-    </Menu.Item>
-    <Menu.Item>
-      <Button className="bor-rad-6 w-100">
-        <Link to={constants.ROUTES.LOGIN}>
-          Đăng nhập
-          <UserOutlined className="m-l-4" />
-        </Link>
-      </Button>
-    </Menu.Item>
-    <Menu.Item>
-      <Button className="bor-rad-6 w-100">
-        <Link to={constants.ROUTES.SIGNUP}>
-          Đăng ký
-          <UserAddOutlined className="m-l-4" />
-        </Link>
-      </Button>
-    </Menu.Item>
-  </Menu>
-);
 
 // fn: Tạo ra menu dropdown
 function generateMenuDropdown(menu) {
@@ -60,7 +33,34 @@ const hireMenu = generateMenuDropdown(constants.HIRE_HOUSE_MENU);
 function HeaderView() {
   const { isAuth } = useSelector((state) => state.authenticate);
   const user = useSelector((state) => state.user);
-  console.log(isAuth, user);
+
+  // action menu cho dropdown
+  const actionMenu = (
+    <Menu className="m-t-18 bor-rad-8">
+      <Menu.Item>
+        <Button className="bor-rad-6 w-100">
+          Đăng tin
+          <EditOutlined />
+        </Button>
+      </Menu.Item>
+      <Menu.Item>
+        <Button className="bor-rad-6 w-100">
+          <Link to={constants.ROUTES.LOGIN}>
+            {isAuth ? helpers.reduceName(user.fullName, 8) : 'Đăng nhập'}
+            <UserOutlined className="m-l-4" />
+          </Link>
+        </Button>
+      </Menu.Item>
+      <Menu.Item>
+        <Button className="bor-rad-6 w-100">
+          <Link to={constants.ROUTES.SIGNUP}>
+            Đăng ký
+            <UserAddOutlined className="m-l-4" />
+          </Link>
+        </Button>
+      </Menu.Item>
+    </Menu>
+  );
 
   return (
     <div className="container-fluid header-view-wrapper">
@@ -93,7 +93,7 @@ function HeaderView() {
           </Button>
           <Button className="m-l-8 bor-rad-6">
             <Link to={constants.ROUTES.LOGIN}>
-              Đăng nhập
+              {isAuth ? helpers.reduceName(user.fullName, 8) : 'Đăng nhập'}
               <UserOutlined className="m-l-4" />
             </Link>
           </Button>

@@ -6,3 +6,7 @@ const reduceName = (name, length = 64) => {
   }
   return result;
 };
+
+export default {
+  reduceName,
+};

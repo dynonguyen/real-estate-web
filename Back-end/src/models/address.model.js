@@ -15,7 +15,7 @@ const addressSchema = new Schema({
   // Mảng các huyện, thị xã
   districts: [
     {
-      id: { type: String, required: true, unique },
+      id: { type: String, required: true, unique: true },
       name: { type: String, required: true, trim: true },
       // Mảng các phường, thị trấn
       wards: [
@@ -38,6 +38,6 @@ const addressSchema = new Schema({
   ],
 });
 
-const addressModel = mongoose.model('address', addressSchema, 'addresss');
+const AddressModel = mongoose.model('address', addressSchema, 'address');
 
-module.exports = addressModel;
+module.exports = AddressModel;

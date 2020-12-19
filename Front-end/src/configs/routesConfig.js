@@ -2,6 +2,7 @@ import HomePage from 'containers/HomePage';
 import constants from 'constants/index.js';
 import React from 'react';
 import { Route } from 'react-router-dom';
+import FooterView from 'components/FooterView';
 const Login = React.lazy(() => import('containers/Login'));
 const Signup = React.lazy(() => import('containers/SignUp'));
 const ForgotPassword = React.lazy(() =>
@@ -33,6 +34,11 @@ const routes = [
     path: constants.ROUTES.NOT_FOUND,
     exact: true,
     main: () => <h1>Not Found</h1>,
+  },
+  {
+    path: '/test',
+    exact: true,
+    main: () => <></>,
   },
 ];
 

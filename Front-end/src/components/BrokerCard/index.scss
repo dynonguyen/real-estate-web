@@ -1,0 +1,20 @@
+.broker-card {
+  border: solid 1px #ddd;
+  background-color: #f4f5f6;
+  max-width: 240px;
+  height: 310px;
+  .avt {
+    width: 135px;
+    height: 135px;
+    position: relative;
+    & > span {
+      color: #fff;
+    }
+  }
+  .name {
+    color: #0074e4;
+  }
+  .contact {
+    color: #888;
+  }
+}

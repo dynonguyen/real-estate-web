@@ -14,6 +14,12 @@ const userApi = {
     const url = USER_API_URL + '/broker/all';
     return axiosClient.get(url);
   },
+
+  // get info user with id
+  getInfoUser: (id) => {
+    const url = USER_API_URL + '/info';
+    return axiosClient.get(url, { params: { id } });
+  },
 };
 
 export default userApi;

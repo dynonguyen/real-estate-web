@@ -1,5 +1,6 @@
 import constants from 'constants/index.js';
 import HomePage from 'containers/HomePage';
+import PostDetailPage from 'containers/PostDetailPage';
 import React from 'react';
 import { Route } from 'react-router-dom';
 const Login = React.lazy(() => import('containers/Login'));
@@ -36,9 +37,9 @@ const routes = [
     main: () => <NotFound />,
   },
   {
-    path: '/test',
+    path: constants.ROUTES.HOUSE + '/:id',
     exact: true,
-    main: () => <></>,
+    main: (id) => <PostDetailPage id={id} />,
   },
 ];
 

@@ -1,0 +1,12 @@
+.post-detail {
+  .adv {
+    overflow: hidden;
+    img {
+      &:hover,
+      &:active {
+        transform: scale(1.3);
+        transition: all 1.2s;
+      }
+    }
+  }
+}

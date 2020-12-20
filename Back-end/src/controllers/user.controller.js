@@ -1,3 +1,4 @@
+const AccountModel = require('../models/accounts/account.model');
 const BrokerModel = require('../models/accounts/borker.model');
 const UserModel = require('../models/accounts/user.model');
 
@@ -31,8 +32,23 @@ const getBrokerList = async (req, res, next) => {
   }
 };
 
+// get info user
+const getInfoUser = async (req, res, next) => {
+  try {
+    const { id } = req.query;
+    const user = await UserModel.findById(id);
+    if (user) {
+      const account = await AccountModel.findById(user.accountId);
+      return res.status(200).json({ ...user._doc, email: account.email });
+    }
+  } catch (error) {
+    return res.status(400).json({ message: 'Lỗi' });
+  }
+};
+
 //export
 module.exports = {
   getUser,
   getBrokerList,
+  getInfoUser,
 };

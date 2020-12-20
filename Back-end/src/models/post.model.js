@@ -6,9 +6,6 @@ const postSchema = new Schema({
   // Mã bài đăng
   code: { type: String, unique: true, trim: true, required: true },
 
-  // người đăng
-  host: { type: Schema.Types.ObjectId, required: true },
-
   // nhà được đăng
   houseId: { type: Schema.Types.ObjectId, required: true },
 
@@ -17,6 +14,11 @@ const postSchema = new Schema({
 
   // ngày kết thúc
   end: { type: Date, required: true, default: Date.now() },
+
+  // mảng các thông tin khác [{key: value}]
+  details: [
+    { key: { type: String, trim: true }, value: { type: String, trim: true } },
+  ],
 
   // những bức ảnh khác của nhà
   catalogs: { type: [String], default: [] },

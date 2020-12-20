@@ -1,0 +1,17 @@
+.post-overview {
+  .catalog-item {
+    &:hover,
+    &:active,
+    &.active {
+      border: solid 1px rgb(44, 72, 231);
+      border-radius: 4px;
+    }
+  }
+  .name {
+    color: rgb(100, 121, 236);
+    text-transform: uppercase;
+  }
+  .author-contact {
+    color: #888;
+  }
+}

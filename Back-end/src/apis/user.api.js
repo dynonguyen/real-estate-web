@@ -9,4 +9,7 @@ userApi.get('/', passportAuth.jwtAuthentication, userController.getUser);
 // api: get broker list
 userApi.get('/broker/all', userController.getBrokerList);
 
+// api: get info user with id
+userApi.get('/info', userController.getInfoUser);
+
 module.exports = userApi;

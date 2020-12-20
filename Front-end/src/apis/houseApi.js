@@ -8,6 +8,12 @@ const houseApi = {
     const url = HOUSE_API_URL + '/list';
     return axiosClient.get(url, { params: { type, isHire, limit, id } });
   },
+
+  // lấy nhà theo id
+  getHouse: (id) => {
+    const url = HOUSE_API_URL;
+    return axiosClient.get(url, { params: { id } });
+  },
 };
 
 export default houseApi;

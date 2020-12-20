@@ -4,11 +4,13 @@ import React from 'react';
 
 function GlobalLoading(props) {
   return (
-    <Spin
-      size="large"
-      className="Global-Loading trans-center"
-      tip={props.content}
-    />
+    <div style={{ height: '100vh' }}>
+      <Spin
+        size="large"
+        className="Global-Loading trans-center"
+        tip={props.content}
+      />
+    </div>
   );
 }
 

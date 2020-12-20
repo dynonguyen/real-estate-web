@@ -1,0 +1,42 @@
+.post-desc {
+  .name {
+    color: #40a9ff;
+    font-size: large;
+    border-bottom: dashed 1px #aaa;
+  }
+  .action {
+    justify-content: flex-end;
+    * {
+      font-size: 18px;
+      color: #888;
+      &:hover {
+        color: #f74a27;
+      }
+    }
+    *:not(:last-child) {
+      margin-right: 6px;
+    }
+  }
+  .content {
+    white-space: pre-wrap;
+    word-break: keep-all;
+    text-align: justify;
+    font-size: 16px;
+  }
+  .details {
+    background-color: #f2f3f4;
+    border: solid 1px #ccc;
+  }
+  .see-more,
+  .see-more > * {
+    color: #3555c5;
+    &:hover {
+      color: #516ed8;
+      transform: scale(1.05);
+    }
+  }
+  .hide-desc {
+    max-height: 350px;
+    overflow-y: hidden;
+  }
+}

@@ -1,4 +1,8 @@
 .broker-card {
+  &:hover {
+    transform: scale(1.03);
+    transition: all 0.5s;
+  }
   border: solid 1px #ddd;
   background-color: #f4f5f6;
   height: 310px;

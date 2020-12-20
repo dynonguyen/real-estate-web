@@ -14,6 +14,7 @@ const constants = require('./src/constants');
 const accountApi = require('./src/apis/account.api');
 const userApi = require('./src/apis/user.api');
 const loginApi = require('./src/apis/login.api');
+const postApi = require('./src/apis/post.api');
 
 // ! ================== set port ================== //
 const app = express();
@@ -75,3 +76,6 @@ app.use('/address', addressApi);
 
 // api liên quan đến nhà
 app.use('/house', houseApi);
+
+// api liên quan bài đăng
+app.use('/post', postApi);

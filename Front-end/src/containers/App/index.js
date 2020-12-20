@@ -13,6 +13,7 @@ import routesConfig from 'configs/routesConfig';
 import React, { Suspense, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+const NotFound = React.lazy(() => import('components/NotFound'));
 // reducer action
 import authActions from 'reducers/auth';
 import userActions from 'reducers/user';
@@ -48,7 +49,7 @@ function App() {
           <Switch>
             {renderRoutes(routes)}
             <Route>
-              <h1>Not found</h1>
+              <NotFound />
             </Route>
           </Switch>
 

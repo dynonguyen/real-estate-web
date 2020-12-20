@@ -15,19 +15,22 @@ function HouseList(props) {
 
   // Lấy ds nhà
   useEffect(() => {
+    let isSubscribe = true;
     async function getHouseList() {
       try {
         const response = await houseApi.getHouseList(type, isHire, noHouse, id);
-        if (response) {
+        if (response && isSubscribe) {
           setList(response.data);
           setIsLoading(false);
         }
       } catch (error) {
-        setIsLoading(false);
+        if (isSubscribe) setIsLoading(false);
         throw error;
       }
     }
+
     getHouseList();
+    return () => (isSubscribe = false);
   }, [id, type, isHire]);
 
   // rendering...

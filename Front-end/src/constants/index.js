@@ -5,6 +5,7 @@ const ROUTES = {
   SIGNUP: '/signup',
   FORGOT_PASSWORD: '/login/forgot-pw',
   HOUSE: '/house',
+  ACCOUNT: '/accounts',
 };
 
 // menu nhà bán trên navbar
@@ -111,4 +112,6 @@ export default {
 
   // thời gian delay khi chuyển trang (tăng UX)
   DELAY_TIME: 500,
+  COMMENT_PER_PAGE: 8,
+  MAX_LEN_COMMENT: 1000,
 };

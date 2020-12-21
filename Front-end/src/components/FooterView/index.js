@@ -72,22 +72,32 @@ function FooterView() {
             </div>
           </div>
           <div className="d-flex">
-            <FacebookFilled
-              className="p-lr-4 social-item"
-              style={{ fontSize: 36, color: '#0C86EF' }}
-            />
-            <LinkedinFilled
-              className="p-lr-4 social-item"
-              style={{ fontSize: 36, color: '#0073B1' }}
-            />
-            <GooglePlusSquareFilled
-              className="p-lr-4 social-item"
-              style={{ fontSize: 36, color: '#DB5247' }}
-            />
-            <TwitterSquareFilled
-              className="p-lr-4 social-item"
-              style={{ fontSize: 36, color: '#55ACEF' }}
-            />
+            <a href="https://fb.com" target="blank">
+              <FacebookFilled
+                className="p-lr-4 social-item"
+                style={{ fontSize: 36, color: '#0C86EF' }}
+              />
+            </a>
+            <a href="https://www.linkedin.com/">
+              <LinkedinFilled
+                className="p-lr-4 social-item"
+                style={{ fontSize: 36, color: '#0073B1' }}
+              />
+            </a>
+            <a href="https://mail.google.com" target="blank">
+              {' '}
+              <GooglePlusSquareFilled
+                className="p-lr-4 social-item"
+                style={{ fontSize: 36, color: '#DB5247' }}
+              />
+            </a>
+
+            <a href="https://twitter.com/" target="blank">
+              <TwitterSquareFilled
+                className="p-lr-4 social-item"
+                style={{ fontSize: 36, color: '#55ACEF' }}
+              />
+            </a>
           </div>
         </div>
       </div>

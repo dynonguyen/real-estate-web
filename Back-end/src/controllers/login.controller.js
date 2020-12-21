@@ -3,7 +3,7 @@ const mailConfig = require('../configs/mail.config');
 const constants = require('../constants');
 const bcrypt = require('bcryptjs');
 const jwtConfig = require('../configs/jwt.config');
-
+const jwt = require('jsonwebtoken');
 // fn: đăng nhập local
 // Note: login success -> create refresh token -> create jwt -> set cookie client
 const postLogin = async (req, res, next) => {
@@ -168,8 +168,26 @@ const postRefreshToken = async (req, res, next) => {
   }
 };
 
+//logout
+const postLogout = async (req, res, next) => {
+  try {
+    const { access_token } = req.cookies;
+    const decoded = await jwt.verify(access_token, process.env.JWT_SECRET_KEY);
+    const { accountId } = decoded.sub;
+
+    //remove refresh token
+    await AccountModel.updateOne({ _id: accountId }, { refreshToken: null });
+    //clear cookie client
+    res.clearCookie('access_token');
+    return res.status(200).json({ message: 'success' });
+  } catch (error) {
+    return res.status(409).json({ message: 'failed' });
+  }
+};
+
 module.exports = {
   postLogin,
+  postLogout,
   postLoginWithGoogle,
   postRefreshToken,
   getAuth,

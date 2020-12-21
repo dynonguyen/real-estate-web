@@ -8,6 +8,7 @@ import PostOverview from './Overview';
 import advBanner_1 from 'assets/imgs/v-banner.jpg';
 import advBanner_2 from 'assets/imgs/v-banner-2.jpg';
 import HouseView from 'components/HouseView';
+import Evaluation from 'containers/PostDetailPage/Evaluation';
 
 const AddressMap = () => {
   return (
@@ -36,6 +37,7 @@ function PostDetail(props) {
       <Col span={24} lg={18}>
         <PostOverview avt={avt} catalogs={catalogs} host={host} />
       </Col>
+
       {/* quảng cáo */}
       <Col span={0} lg={6} className="p-lr-16">
         <div className="adv">
@@ -46,10 +48,12 @@ function PostDetail(props) {
           />
         </div>
       </Col>
+
       {/* mô tả chi tiết */}
       <Col span={24} lg={18}>
         <Description house={house} post={post} />
       </Col>
+
       {/* quảng cáo */}
       <Col span={0} lg={6} className="p-lr-16 m-t-32">
         <a
@@ -64,9 +68,16 @@ function PostDetail(props) {
           />
         </a>
       </Col>
+
+      {/* comment */}
+      <Col span={24} className="m-b-32 box-sha-home">
+        <Evaluation houseId={house._id} />
+      </Col>
+
       <Col span={24} className="bg-white p-16 bor-rad-8 m-b-32 box-sha-home">
         <HouseList title="Bất động sản nổi bật" />
       </Col>
+
       {/* embed gg map */}
       <Col span={24} className="m-b-32 box-sha-home">
         {AddressMap()}

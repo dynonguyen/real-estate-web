@@ -15,6 +15,9 @@ const accountApi = require('./src/apis/account.api');
 const userApi = require('./src/apis/user.api');
 const loginApi = require('./src/apis/login.api');
 const postApi = require('./src/apis/post.api');
+const addressApi = require('./src/apis/address.api');
+const houseApi = require('./src/apis/house.api');
+const commentApi = require('./src/apis/comment.api');
 
 // ! ================== set port ================== //
 const app = express();
@@ -38,8 +41,6 @@ if (!dev) {
 
 // ! ================== Connect mongodb with mongoose ================== //
 const mongoose = require('mongoose');
-const addressApi = require('./src/apis/address.api');
-const houseApi = require('./src/apis/house.api');
 const MONGO_URL = dev ? process.env.MONGO_URL_LOCAL : process.env.MONGO_URL;
 mongoose.connect(MONGO_URL, {
   useUnifiedTopology: true,
@@ -79,3 +80,6 @@ app.use('/house', houseApi);
 
 // api liên quan bài đăng
 app.use('/post', postApi);
+
+// api liên quan comment
+app.use('/comments', commentApi);

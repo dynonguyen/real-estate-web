@@ -1,10 +1,12 @@
 import {
+  AccountBookOutlined,
   EditOutlined,
+  LogoutOutlined,
   MenuOutlined,
   UserAddOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import { Button, Dropdown, Menu } from 'antd';
+import { Button, Dropdown, Menu, message } from 'antd';
 import logoImg from 'assets/imgs/logo.png';
 import smallLogoImg from 'assets/imgs/small-logo.png';
 import React from 'react';
@@ -12,6 +14,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import constants from 'constants/index';
 import helpers from 'helpers';
+import loginApi from 'apis/loginApi';
 import './index.scss';
 
 // fn: Tạo ra menu dropdown
@@ -33,6 +36,20 @@ const hireMenu = generateMenuDropdown(constants.HIRE_HOUSE_MENU);
 function HeaderView() {
   const { isAuth } = useSelector((state) => state.authenticate);
   const user = useSelector((state) => state.user);
+
+  // event: Đăng xuất
+  const onLogout = async () => {
+    try {
+      const response = await loginApi.postLogout();
+      if (response) {
+        message.success('Đăng xuất thành công', 2);
+        localStorage.removeItem(constants.REFRESH_TOKEN_KEY);
+        location.reload();
+      }
+    } catch (error) {
+      message.error('Đăng xuất thất bại', 2);
+    }
+  };
 
   // action menu cho dropdown
   const actionMenu = (
@@ -56,6 +73,29 @@ function HeaderView() {
           <Link to={constants.ROUTES.SIGNUP}>
             Đăng ký
             <UserAddOutlined className="m-l-4" />
+          </Link>
+        </Button>
+      </Menu.Item>
+    </Menu>
+  );
+
+  const actionAccount = (
+    <Menu className="m-t-18 bor-rad-8">
+      <Menu.Item>
+        <Button
+          onClick={onLogout}
+          danger
+          type="primary"
+          className="bor-rad-6 w-100">
+          Đăng xuất
+          <LogoutOutlined />
+        </Button>
+      </Menu.Item>
+      <Menu.Item>
+        <Button type="primary" className="bor-rad-6 w-100">
+          <Link to={constants.ROUTES.ACCOUNT}>
+            Tài khoản
+            <AccountBookOutlined className="m-l-4" />
           </Link>
         </Button>
       </Menu.Item>
@@ -91,12 +131,24 @@ function HeaderView() {
             Đăng tin
             <EditOutlined />
           </Button>
-          <Button className="m-l-8 bor-rad-6">
-            <Link to={constants.ROUTES.LOGIN}>
-              {isAuth ? helpers.reduceName(user.fullName, 8) : 'Đăng nhập'}
-              <UserOutlined className="m-l-4" />
-            </Link>
-          </Button>
+          {/* Nếu chưa đăng nhập */}
+          {!isAuth ? (
+            <Button className="m-l-8 bor-rad-6">
+              <Link to={constants.ROUTES.LOGIN}>
+                Đăng nhập
+                <UserOutlined className="m-l-4" />
+              </Link>
+            </Button>
+          ) : (
+            <Dropdown overlay={actionAccount}>
+              <Button className="m-l-8 bor-rad-6">
+                <Link to={constants.ROUTES.LOGIN}>
+                  {helpers.reduceName(user.fullName, 12)}
+                  <UserOutlined className="m-l-4" />
+                </Link>
+              </Button>
+            </Dropdown>
+          )}
           <Button className="m-l-8 bor-rad-6">
             <Link to={constants.ROUTES.SIGNUP}>
               Đăng ký <UserAddOutlined />

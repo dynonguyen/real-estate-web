@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import {
   CaretDownOutlined,
   CaretUpOutlined,
@@ -8,55 +7,23 @@ import {
   TagFilled,
 } from '@ant-design/icons';
 import { Col, Row } from 'antd';
+import constants from 'constants/index';
+import helpers from 'helpers';
+import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 import './index.scss';
 
-const content = `Nhà văn phòng 9 tầng do chủ nhà trực tiếp quản lý và cho thuê có thiết kế hiện đại. Mặt tiền thoáng và rộng. Tọa lạc tại vị trí giao thông thuận tiện (gần ngã tư Chùa Bộc - Thái Hà). Là địa điểm lý tưởng cho các công ty, doanh nghiệp chọn làm văn phòng giao dịch và làm việc.
-- Diện tích sàn: 400m2 x 9 tầng.
-- Diện tích sử dụng: 265m2/sàn.
-- Diện tích hiện trống:
-+ 82m2 VP tại tầng 2. Giá 17 triệu/tháng.
-+ 170m2 VP tại tầng 8
-- Văn phòng thiết kế hiện ��ại:
-+ Có điều hòa âm trần.
-+ Hệ thống ánh sáng đạt chuẩn.
-+ Thang máy đôi tốc độ cao.
-+ Trạm điện riêng.
-+ Máy phát điện dự phòng công suất lớn.
-+ Camera an ninh và bảo vệ 24/24h.
-+ Tầng hầm để xe.
-+ Dịch vụ tòa nhà chuyên nghiệp.
-Đặc biệt, miễn phí làm ngoài giờ (kể cả ngày lễ và chủ nhật).
-LH trực tiếp chủ nhà: Nguyễn Giang 098.664.6169.
-Cam kết:
-- Thông tin và hình ảnh trung thực.
-- Làm việc với chủ nhà
-- Chủ nhà trực tiếp quản lý và cho thuê`;
-
-const details = [
-  { key: 'Mã tin', value: '296161' },
-  { key: 'Loại', value: 'Nhà riêng' },
-  { key: 'Tỉnh thành', value: 'Sài Gòn' },
-  { key: 'Địa chỉ', value: '18/11 Thái Hà, Trung Liệt, Đống Đa, Hà Nội' },
-  { key: 'Ngày đăng', value: '18/11/2020' },
-  { key: 'Mã tin', value: '296161' },
-  { key: 'Loại', value: 'Nhà riêng' },
-  { key: 'Tỉnh thành', value: 'Sài Gòn' },
-  { key: 'Địa chỉ', value: '18/11 Thái Hà, Trung Liệt, Đống Đa, Hà Nội' },
-  { key: 'Ngày đăng', value: '18/11/2020' },
-  { key: 'Mã tin', value: '296161' },
-  { key: 'Loại', value: 'Nhà riêng' },
-  { key: 'Tỉnh thành', value: 'Sài Gòn' },
-  { key: 'Địa chỉ', value: '18/11 Thái Hà, Trung Liệt, Đống Đa, Hà Nội' },
-  { key: 'Ngày đăng', value: '18/11/2020' },
-];
-
 function Description(props) {
-  const { house, host } = props;
-  console.log(house);
+  const { house, post } = props;
+  const { code, details, content, start, end } = post;
   const { title, address, isHire, square, price, type } = house;
   const [isHideDesc, setIsHideDesc] = useState(false);
   const [isShowSeeMore, setIsShowSeeMore] = useState(false);
+
+  // lọc dữ liệu renderr
+  let typeHouse = constants.REAL_ESTATE_TYPES.find((item) => item.type == type);
+  let typeStr = typeHouse ? typeHouse.title : 'Bất động sản khác';
+  let province = address.split(',');
 
   // ev: hiển thị xem thêm bài viết chi tiết
   const onSeeMore = () => {
@@ -78,23 +45,85 @@ function Description(props) {
       id="descId">
       {/* Tên sản phẩm */}
       <p className="name p-b-8 p-lr-16 m-b-0 ">
-        <b>
-          82 và 170m2 cho thuê tại nhà vp 9 tầng tại phố thái hà. giá 17
-          triệu/tháng. lh trực tiếp chủ nhà 0986646169
-        </b>
+        <b>{title}</b>
       </p>
       <div className="d-flex align-i-center action p-tb-8">
         <ClockCircleOutlined />
-        <span className="m-r-12">03/12/2020</span>
+        <span className="m-r-12">{helpers.formatTime(start)}</span>
         <HeartFilled />
         <PrinterFilled />
         <TagFilled />
       </div>
       <Row className={`${!isHideDesc ? 'hide-desc' : ''}`}>
         <Col span={24} md={14}>
-          <div className="content p-16">{content}</div>
+          <div className="content p-16">
+            {content ? content : 'Đang cập nhật'}
+          </div>
         </Col>
         <Col className="details bor-rad-6 p-16" span={24} md={10}>
+          {/* Mã bài đăng */}
+          <div className="item d-flex justify-content-between m-b-12">
+            <h3 className="key font-size-18px">Mã tin</h3>
+            <span className="value font-size-16px">{code}</span>
+          </div>
+
+          {/* Loại */}
+          <div className="item d-flex justify-content-between m-b-12">
+            <h3 className="key font-size-18px">Loại</h3>
+            <span className="value font-size-16px">{typeStr}</span>
+          </div>
+
+          {/* Giá */}
+          <div className="item d-flex justify-content-between m-b-12">
+            <h3 className="key font-size-18px">Giá cả</h3>
+            <span className="value font-size-16px p-tb-4 p-lr-8 price bor-rad-6">
+              {price
+                ? `${price} ${isHire ? ' Tỷ' : ' Triệu/tháng'}`
+                : 'Thoả thuận'}
+            </span>
+          </div>
+
+          {/* Diện tích */}
+          <div className="item d-flex justify-content-between m-b-12">
+            <h3 className="key font-size-18px">Diện tích</h3>
+            <span className="value font-size-16px">
+              {square ? square : 'Liên hệ'} m<sup>2</sup>
+            </span>
+          </div>
+
+          {/* Tỉnh thành */}
+          <div className="item d-flex justify-content-between m-b-12">
+            <h3 className="key font-size-18px">Tỉnh/thành</h3>
+            <span className="value font-size-16px">
+              {province.length > 0 ? province[province.length - 1] : 'Liên hệ'}
+            </span>
+          </div>
+
+          {/*  Địa chỉ cụ thể */}
+          <div className="item d-flex justify-content-between m-b-12">
+            <h3 className="key font-size-18px">Địa chỉ</h3>
+            <span className="value font-size-16px">
+              {address ? address : 'Liên hệ'}
+            </span>
+          </div>
+
+          {/*  Ngày đăng */}
+          <div className="item d-flex justify-content-between m-b-12">
+            <h3 className="key font-size-18px">Ngày đăng</h3>
+            <span className="value font-size-16px">
+              {helpers.formatTime(start)}
+            </span>
+          </div>
+
+          {/*  Ngày hết hạn */}
+          <div className="item d-flex justify-content-between m-b-12">
+            <h3 className="key font-size-18px">Ngày kết thúc</h3>
+            <span className="value font-size-16px">
+              {helpers.formatTime(end)}
+            </span>
+          </div>
+
+          {/* Các thông tin khác */}
           {details.map((item, index) => (
             <div
               key={index}
@@ -120,7 +149,7 @@ function Description(props) {
 }
 
 Description.propTypes = {
-  host: PropTypes.any,
+  post: PropTypes.any,
   house: PropTypes.any,
 };
 

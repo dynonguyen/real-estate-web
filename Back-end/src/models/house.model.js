@@ -18,7 +18,7 @@ const houseSchema = new Schema({
   // loại bất động sản (Chuyển đổi xem trong thư mục helpers)
   type: { type: Number, enum: [...Array(11).keys()], default: 0 },
 
-  // giá (nếu nhà bán: tính theo tỉ (triệu), thuê (triệu/tháng))
+  // giá (nếu nhà bán: tính theo tỉ, thuê (triệu/tháng))
   price: { type: Number, required: true, default: 0 },
 
   // diện tích nhà (m^2)

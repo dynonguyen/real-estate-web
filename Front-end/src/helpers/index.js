@@ -17,7 +17,17 @@ const convertWidthScreen = (size = 576) => {
   return 'xxl';
 };
 
+//fn: Format string theo dạng d/m/yyyy
+function formatTime(time) {
+  let t = time ? new Date(time) : Date.now();
+  const y = t.getFullYear();
+  const m = t.getMonth() + 1;
+  const d = t.getDate();
+  return `${d}/${m}/${y}`;
+}
+
 export default {
   convertWidthScreen,
   reduceName,
+  formatTime,
 };

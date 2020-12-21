@@ -48,7 +48,7 @@ function PostDetail(props) {
       </Col>
       {/* mô tả chi tiết */}
       <Col span={24} lg={18}>
-        <Description house={house} host={host} />
+        <Description house={house} post={post} />
       </Col>
       {/* quảng cáo */}
       <Col span={0} lg={6} className="p-lr-16 m-t-32">

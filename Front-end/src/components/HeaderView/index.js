@@ -56,8 +56,10 @@ function HeaderView() {
     <Menu className="m-t-18 bor-rad-8">
       <Menu.Item>
         <Button className="bor-rad-6 w-100">
-          Đăng tin
-          <EditOutlined />
+          <Link to={constants.ROUTES.CONTACT_POST}>
+            Đăng tin
+            <EditOutlined />
+          </Link>
         </Button>
       </Menu.Item>
       <Menu.Item>
@@ -121,15 +123,21 @@ function HeaderView() {
           <Dropdown overlay={hireMenu} placement="bottomCenter">
             <li>CHO THUÊ</li>
           </Dropdown>
-          <li>BÁO GIÁ</li>
-          <li>LIÊN HỆ</li>
+          <li>
+            <a href="#footer">BÁO GIÁ</a>
+          </li>
+          <li>
+            <Link to={constants.ROUTES.CONTACT_POST}>LIÊN HỆ</Link>
+          </li>
         </ul>
 
         {/* Phần nút điều khiển */}
         <div className="action">
           <Button className="bor-rad-6">
-            Đăng tin
-            <EditOutlined />
+            <Link to={constants.ROUTES.CONTACT_POST}>
+              Đăng tin
+              <EditOutlined className="m-l-8" />
+            </Link>
           </Button>
           {/* Nếu chưa đăng nhập */}
           {!isAuth ? (

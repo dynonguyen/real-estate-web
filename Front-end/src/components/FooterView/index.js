@@ -12,7 +12,7 @@ import registeredImg from 'assets/imgs/registered.png';
 import iconPhoneFooter from 'assets/imgs/icon-phone-footer.png';
 function FooterView() {
   return (
-    <div className="container-fluid bg-white footer p-lr-0">
+    <div className="container-fluid bg-white footer p-lr-0" id="footer">
       {/* Môi giới */}
       <BrokerList />
       {/* Liên hệ */}

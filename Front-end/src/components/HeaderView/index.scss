@@ -23,7 +23,8 @@
 
   .navbar {
     flex-grow: 1;
-    li {
+    li,
+    a {
       cursor: pointer;
       color: $text-color-primary;
       font-size: 16px;

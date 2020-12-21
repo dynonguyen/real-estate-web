@@ -10,6 +10,7 @@ const ForgotPassword = React.lazy(() =>
 const NotFound = React.lazy(() => import('components/NotFound'));
 const PostDetailPage = React.lazy(() => import('containers/PostDetailPage'));
 const FilterPage = React.lazy(() => import('containers/FilterPage'));
+const ContactPost = React.lazy(() => import('components/ContactPost'));
 
 const routes = [
   {
@@ -46,6 +47,11 @@ const routes = [
     path: constants.ROUTES.FILTER,
     exact: true,
     main: () => <FilterPage />,
+  },
+  {
+    path: constants.ROUTES.CONTACT_POST,
+    exact: true,
+    main: () => <ContactPost />,
   },
 ];
 

@@ -7,27 +7,28 @@ const ROUTES = {
   HOUSE: '/house',
   ACCOUNT: '/accounts',
   FILTER: '/filter',
+  CONTACT_POST: '/contact',
 };
 
 // menu nhà bán trên navbar
 const SALE_HOUSE_MENU = [
-  { link: '', title: 'Bán nhà riêng' },
-  { link: '', title: 'Bán căn hộ chung cư' },
-  { link: '', title: 'Bán biệt thự' },
-  { link: '', title: 'Bán nhà mặt phố' },
-  { link: '', title: 'Bán đất nền' },
+  { link: '/filter?isHire=false&type=8', title: 'Bán nhà riêng' },
+  { link: '/filter?isHire=false&type=0', title: 'Bán căn hộ chung cư' },
+  { link: '/filter?isHire=false&type=6', title: 'Bán biệt thự' },
+  { link: '/filter?isHire=false&type=1', title: 'Bán nhà mặt phố' },
+  { link: '/filter?isHire=false&type=7', title: 'Bán đất nền' },
 ];
 
 // menu nhà cho thuê trên navbar
 const HIRE_HOUSE_MENU = [
-  { link: '', title: 'Cho thuê nhà riêng' },
-  { link: '', title: 'Cho thuê căn hộ' },
-  { link: '', title: 'Cho thuê biệt thự' },
-  { link: '', title: 'Cho thuê nhà mặt phố' },
-  { link: '', title: 'Cho thuê đất nền' },
-  { link: '', title: 'Cho thuê phòng trọ' },
-  { link: '', title: 'Cho thuê cửa hàng' },
-  { link: '', title: 'Cho thuê văn phòng' },
+  { link: '/filter?isHire=true&type=8', title: 'Cho thuê nhà riêng' },
+  { link: '/filter?isHire=true&type=4', title: 'Cho thuê căn hộ' },
+  { link: '/filter?isHire=true&type=6', title: 'Cho thuê biệt thự' },
+  { link: '/filter?isHire=true&type=1', title: 'Cho thuê nhà mặt phố' },
+  { link: '/filter?isHire=true&type=7', title: 'Cho thuê đất nền' },
+  { link: '/filter?isHire=true&type=5', title: 'Cho thuê phòng trọ' },
+  { link: '/filter?isHire=true&type=2', title: 'Cho thuê cửa hàng' },
+  { link: '/filter?isHire=true&type=9', title: 'Cho thuê văn phòng' },
 ];
 
 // gender options

@@ -19,6 +19,13 @@ function HomeView(props) {
     maxWidth,
   } = props;
 
+  const priceRender =
+    price > 0
+      ? type
+        ? `${price.toFixed(2)} Tr/th`
+        : `${(price / 1000).toFixed(2)} Tỷ`
+      : 'Thoả thuận';
+
   // set height cho các avt của nhà
   useEffect(() => {
     document
@@ -31,7 +38,7 @@ function HomeView(props) {
     <Card
       className="home-view"
       id="card-item"
-      style={{ height, maxWidth }}
+      style={{ height }}
       loading={false}
       cover={
         <img
@@ -49,7 +56,7 @@ function HomeView(props) {
       {/* Giá & diện tích nhà */}
       <div>
         <b className="home-view-price p-lr-12 p-tb-4 bor-rad-6 m-r-12">
-          {price > 0 ? price + (type ? ' Tỷ' : ' Triệu/tháng') : 'Thoả thuận'}
+          {priceRender}
         </b>
         {square > 0 ? (
           <span className="home-view-square">

@@ -37,10 +37,10 @@ function HomePage() {
       {/* Một vài danh sách khác */}
       <Col span={24}>
         <Row gutter={[32, 32]}>
-          <Col span={24} md={12}>
+          <Col span={24} lg={12}>
             <HouseList isDouble={true} title="Căn hộ mini" type={2} />
           </Col>
-          <Col span={24} md={12}>
+          <Col span={24} lg={12}>
             <HouseList isDouble={true} title="Căn hộ tập thể" type={4} />
           </Col>
         </Row>

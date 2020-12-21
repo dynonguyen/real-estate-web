@@ -6,6 +6,7 @@ const ROUTES = {
   FORGOT_PASSWORD: '/login/forgot-pw',
   HOUSE: '/house',
   ACCOUNT: '/accounts',
+  FILTER: '/filter',
 };
 
 // menu nhà bán trên navbar

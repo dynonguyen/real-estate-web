@@ -14,6 +14,14 @@ const houseApi = {
     const url = HOUSE_API_URL;
     return axiosClient.get(url, { params: { id } });
   },
+
+  // filter
+  filterHouse: (conditions, page = 1, perPage = 8) => {
+    const url = HOUSE_API_URL + '/filter';
+    return axiosClient.get(url, {
+      params: { ...conditions, page, perPage },
+    });
+  },
 };
 
 export default houseApi;

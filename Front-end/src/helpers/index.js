@@ -17,7 +17,7 @@ const convertWidthScreen = (size = 576) => {
   return 'xxl';
 };
 
-//fn: Format string theo dạng d/m/yyyy
+// fn: Format string theo dạng d/m/yyyy
 function formatTime(time) {
   let t = time ? new Date(time) : Date.now();
   const y = t.getFullYear();
@@ -26,8 +26,26 @@ function formatTime(time) {
   return `${d}/${m}/${y}`;
 }
 
+// fn: get query url
+function getQueryVariable(query) {
+  let result = {};
+  if (query != '') {
+    let q = query;
+    if (q[0] === '?') q = q.slice(1, q.length);
+    let arrQ = q.split('&');
+    for (let i = 0; i < arrQ.length; ++i) {
+      let pair = arrQ[i].split('=');
+      if (pair.length == 2) {
+        result[pair[0]] = pair[1];
+      }
+    }
+  }
+  return result;
+}
+
 export default {
   convertWidthScreen,
   reduceName,
   formatTime,
+  getQueryVariable,
 };

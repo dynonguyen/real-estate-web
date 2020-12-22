@@ -8,6 +8,7 @@ const ROUTES = {
   ACCOUNT: '/accounts',
   FILTER: '/filter',
   CONTACT_POST: '/contact',
+  ADMIN: '/admin',
 };
 
 // menu nhà bán trên navbar

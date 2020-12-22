@@ -18,6 +18,7 @@ const postApi = require('./src/apis/post.api');
 const addressApi = require('./src/apis/address.api');
 const houseApi = require('./src/apis/house.api');
 const commentApi = require('./src/apis/comment.api');
+const adminApi = require('./src/apis/admin.api');
 
 // ! ================== set port ================== //
 const app = express();
@@ -60,8 +61,6 @@ app.listen(PORT, () => {
 });
 
 // ! ================== Routes - Api ================== //
-// api trang admin
-// app.use('/admin', adminApi);
 
 // api liên quan đến account
 app.use('/accounts', accountApi);
@@ -83,3 +82,6 @@ app.use('/post', postApi);
 
 // api liên quan comment
 app.use('/comments', commentApi);
+
+// api trang admin
+app.use('/admin', adminApi);

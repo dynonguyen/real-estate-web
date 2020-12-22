@@ -11,6 +11,7 @@ const NotFound = React.lazy(() => import('components/NotFound'));
 const PostDetailPage = React.lazy(() => import('containers/PostDetailPage'));
 const FilterPage = React.lazy(() => import('containers/FilterPage'));
 const ContactPost = React.lazy(() => import('components/ContactPost'));
+const AdminPage = React.lazy(() => import('containers/AdminPage'));
 
 const routes = [
   {
@@ -52,6 +53,11 @@ const routes = [
     path: constants.ROUTES.CONTACT_POST,
     exact: true,
     main: () => <ContactPost />,
+  },
+  {
+    path: constants.ROUTES.ADMIN,
+    exact: true,
+    main: () => <AdminPage />,
   },
 ];
 

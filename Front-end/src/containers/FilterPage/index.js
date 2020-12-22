@@ -2,6 +2,7 @@ import { Col, Pagination, Row, Spin } from 'antd';
 import houseApi from 'apis/houseApi';
 import HouseView from 'components/HouseView';
 import constants from 'constants/index';
+import Filter from 'containers/HomePage/Filter';
 import helpers from 'helpers';
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';

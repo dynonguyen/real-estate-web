@@ -11,4 +11,8 @@ adminApi.put('/update-house', adminController.updateHouse);
 
 adminApi.get('/list-customer', adminController.getAllCustomer);
 
+adminApi.get('/list-account', adminController.getAccountList);
+
+adminApi.post('/post', adminController.postAddHouse);
+
 module.exports = adminApi;

@@ -1,20 +1,23 @@
 import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
 import {
   Button,
-  Input,
-  Select,
-  Form,
   Col,
-  Row,
   DatePicker,
-  Space,
+  Form,
+  Input,
   InputNumber,
+  message,
+  Row,
+  Select,
+  Space,
+  Spin,
 } from 'antd';
 import addressApi from 'apis/addressApi';
+import adminApi from 'apis/adminApi';
 import constants from 'constants/index';
 import React, { useEffect, useRef, useState } from 'react';
-const { Option } = Select;
 import './index.scss';
+const { Option } = Select;
 
 function AddPost() {
   const [form] = Form.useForm();
@@ -22,6 +25,8 @@ function AddPost() {
   const [districtList, setDistrictList] = useState([]);
   const [wardList, setWardList] = useState([]);
   const [streetList, setStreetList] = useState([]);
+  const [accountList, setAccountList] = useState([]);
+  const [isPosting, setIsPosting] = useState(false);
   const provinceId = useRef(null);
 
   // fn: lấy danh sách tỉnh thành
@@ -38,6 +43,24 @@ function AddPost() {
       } catch (error) {}
     }
     getProvinceList();
+    // cleanup
+    return () => (isSubscribe = false);
+  }, []);
+
+  // fn: lấy danh sách tài khoản
+  useEffect(() => {
+    // dùng để cleanup effect
+    let isSubscribe = true;
+
+    async function getAccountList() {
+      try {
+        const response = await adminApi.getAccountList();
+        if (response) {
+          if (isSubscribe) setAccountList(response.data);
+        }
+      } catch (error) {}
+    }
+    getAccountList();
     // cleanup
     return () => (isSubscribe = false);
   }, []);
@@ -76,10 +99,62 @@ function AddPost() {
   };
 
   // event: Thêm bài đăng
-  const onAddPost = (value) => {
+  const onAddPost = async (value) => {
     try {
-      console.log(value);
-    } catch (error) {}
+      setIsPosting(true);
+      const {
+        host,
+        avt,
+        title,
+        isHire,
+        type,
+        price,
+        square,
+        province,
+        wards,
+        street,
+        addDetails,
+        code,
+        content,
+        start,
+        end,
+        details,
+        catalogs,
+      } = value;
+
+      const house = {
+        host,
+        avt,
+        title,
+        isHire,
+        type,
+        price,
+        square,
+        address: { province, wards, street, details: addDetails },
+      };
+
+      const post = {
+        code,
+        start: new Date(start).getTime(),
+        end: new Date(end).getTime(),
+        catalogs,
+        content: content ? content : '',
+        details: details ? details : [],
+      };
+
+      const result = await adminApi.postAddHouse(house, post);
+      if (result) {
+        message.success('Thêm bài đăng thành công');
+        setIsPosting(false);
+      }
+    } catch (error) {
+      setIsPosting(false);
+      if (error.response) {
+        message.error(error.response.data.message);
+      } else {
+        message.error('Thêm thất bại, thử lại');
+      }
+    }
   };
 
   return (
@@ -95,6 +170,24 @@ function AddPost() {
             <Input size="large" placeholder="Mã bài đăng" />
           </Form.Item>
         </Col>
+        {/* chủ bài đăng */}
+        <Col span={24} sm={12} md={8} lg={6} xl={4}>
+          <Form.Item name="host" rules={[{ required: true }]}>
+            <Select
+              filterOption={(input, option) =>
+                option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+              }
+              showSearch
+              placeholder="Chủ bài đăng"
+              size="large">
+              {accountList.map((item, index) => (
+                <Option value={item._id} key={index}>
+                  {item.email}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+        </Col>
         {/* Ngày đăng */}
         <Col span={24} sm={12} md={8} lg={6} xl={4}>
           <Form.Item name="start" rules={[{ required: true }]}>
@@ -105,7 +198,7 @@ function AddPost() {
             />
           </Form.Item>
         </Col>
-        {/* Ngày đăng */}
+        {/* Ngày kết thúc */}
         <Col span={24} sm={12} md={8} lg={6} xl={4}>
           <Form.Item name="end" rules={[{ required: true }]}>
             <DatePicker
@@ -188,7 +281,7 @@ function AddPost() {
         </Form.List>
         {/* details */}
         <Col span={24} sm={12} md={8} lg={6} xl={4}>
-          <Form.List name="users">
+          <Form.List name="details">
             {(fields, { add, remove }) => (
               <>
                 {fields.map((field) => (
@@ -364,7 +457,7 @@ function AddPost() {
         </Col>
         {/* address details */}
         <Col span={24} sm={12} md={8} lg={6} xl={4}>
-          <Form.Item name="addDetails">
+          <Form.Item name="addDetails" rules={[{ required: true }]}>
             <Input placeholder="Số nhà cụ thể" size="large" />
           </Form.Item>
         </Col>
@@ -380,8 +473,13 @@ function AddPost() {
               onClick={onReset}>
               Reset Form
             </Button>
-            <Button size="large" type="primary" htmlType="submit">
+            <Button
+              disabled={isPosting}
+              size="large"
+              type="primary"
+              htmlType="submit">
               Thêm bài đăng
+              {isPosting && <Spin />}
             </Button>
           </Form.Item>
         </Col>

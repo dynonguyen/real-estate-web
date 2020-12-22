@@ -32,6 +32,18 @@ const adminApi = {
     const url = ADMIN_API_ENDPOINT + '/list-customer';
     return axiosClient.get(url, { params: { page, perPage } });
   },
+
+  // api: lấy danh sách email khách hàng
+  getAccountList: () => {
+    const url = ADMIN_API_ENDPOINT + '/list-account';
+    return axiosClient.get(url);
+  },
+
+  // api: thêm sản phẩm
+  postAddHouse: (house, post) => {
+    const url = ADMIN_API_ENDPOINT + '/post';
+    return axiosClient.post(url, { house, post });
+  },
 };
 
 export default adminApi;

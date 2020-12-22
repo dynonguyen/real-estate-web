@@ -1,0 +1,9 @@
+.admin-see-house {
+  .icon {
+    font-size: 18px;
+    &:hover {
+      transform: scale(1.4);
+      transition: all 0.5s;
+    }
+  }
+}

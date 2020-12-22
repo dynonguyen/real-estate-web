@@ -5,7 +5,7 @@ import './index.scss';
 
 function ContactIcon() {
   return (
-    <a href="https://fb.com/" target="blank">
+    <a className="contact-icon" href="https://fb.com/" target="blank">
       <Tooltip title="Liên hệ tư vấn" placement="left">
         <img className="Contact-Icon" src={messageIcon} />
       </Tooltip>

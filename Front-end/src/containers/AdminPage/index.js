@@ -14,9 +14,12 @@ import Avatar from 'antd/lib/avatar/avatar';
 import SubMenu from 'antd/lib/menu/SubMenu';
 import defaultAvt from 'assets/imgs/default-avt.png';
 import logo from 'assets/imgs/small-logo.png';
+import Filter from 'containers/HomePage/Filter';
 import React, { useState } from 'react';
+import AddPost from './AddPost';
 import './index.scss';
 import Login from './Login';
+import SeeHouse from './SeeHouse';
 
 const mainColor = '#191932';
 const menuList = [
@@ -62,9 +65,9 @@ const menuList = [
 ];
 
 function AdminPage() {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const [keyMenu, setKeyMenu] = useState('p0');
-  const [userName, setUserName] = useState('admin');
+  const [userName, setUserName] = useState('Admin');
   const onLogin = (isLogin, name) => {
     if (isLogin) {
       setIsLogin(isLogin);
@@ -120,11 +123,9 @@ function AdminPage() {
       case 'd':
         break;
       case 'p0':
-        break;
-      // return <ProductViewPage />;
+        return <SeeHouse />;
       case 'p1':
-        break;
-      // return <AddProduct />;
+        return <AddPost />;
       case 'a':
         break;
       case 'm':

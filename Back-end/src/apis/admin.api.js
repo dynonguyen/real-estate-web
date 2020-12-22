@@ -9,4 +9,6 @@ adminApi.delete('/del-house', adminController.deleteHouse);
 
 adminApi.put('/update-house', adminController.updateHouse);
 
+adminApi.get('/list-customer', adminController.getAllCustomer);
+
 module.exports = adminApi;

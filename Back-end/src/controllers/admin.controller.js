@@ -1,6 +1,7 @@
 const AdminModel = require('../models/accounts/admin.model');
 const HouseModel = require('../models/house.model');
 const helpers = require('../helpers');
+const UserModel = require('../models/accounts/user.model');
 
 const postLogin = async (req, res, next) => {
   try {
@@ -61,9 +62,24 @@ const updateHouse = async (req, res, next) => {
   }
 };
 
+const getAllCustomer = async (req, res, next) => {
+  try {
+    const { perPage, page } = req.query;
+    const skip = (parseInt(page) - 1) * parseInt(perPage);
+    const count = await UserModel.countDocuments({});
+    const userList = await UserModel.find({})
+      .skip(skip)
+      .limit(parseInt(perPage));
+    if (userList) return res.status(200).json({ list: userList, count });
+  } catch (error) {
+    return res.status(400).json({ message: 'failed' });
+  }
+};
+
 module.exports = {
   postLogin,
   getAllHouse,
   deleteHouse,
   updateHouse,
+  getAllCustomer,
 };

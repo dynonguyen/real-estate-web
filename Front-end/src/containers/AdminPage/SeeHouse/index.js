@@ -33,7 +33,7 @@ function SeeHouse() {
   const [total, setTotal] = useState(0);
   const [page, setPage] = useState(1);
   const [editModal, setEditModal] = useState({ isShow: false, props: {} });
-  const perPage = 20;
+  const perPage = 12;
   const data = generateDataList(list);
 
   const columns = [
@@ -124,10 +124,10 @@ function SeeHouse() {
     let isSubscribe = true;
     async function getList() {
       try {
-        const list = await adminApi.getAllHouse(page, perPage);
-        if (list && isSubscribe) {
-          setList(list.data.list);
-          setTotal(list.data.count);
+        const response = await adminApi.getAllHouse(page, perPage);
+        if (response && isSubscribe) {
+          setList(response.data.list);
+          setTotal(response.data.count);
         }
       } catch (error) {
         message.error('Lấy danh sách thất bại, thử lại');
@@ -168,7 +168,7 @@ function SeeHouse() {
       )}
       <Table
         pagination={false}
-        className="p-8 admin-see-house"
+        className="admin-see-house"
         columns={columns}
         dataSource={data}
       />

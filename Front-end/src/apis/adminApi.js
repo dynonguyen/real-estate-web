@@ -26,6 +26,12 @@ const adminApi = {
     const url = ADMIN_API_ENDPOINT + '/update-house';
     return axiosClient.put(url, house);
   },
+
+  // api: lấy danh sách khách hàng
+  getAllCustomer: (page, perPage) => {
+    const url = ADMIN_API_ENDPOINT + '/list-customer';
+    return axiosClient.get(url, { params: { page, perPage } });
+  },
 };
 
 export default adminApi;

@@ -19,6 +19,7 @@ import React, { useState } from 'react';
 import AddPost from './AddPost';
 import './index.scss';
 import Login from './Login';
+import SeeCustomer from './SeeCustomer';
 import SeeHouse from './SeeHouse';
 
 const mainColor = '#191932';
@@ -126,6 +127,8 @@ function AdminPage() {
         return <SeeHouse />;
       case 'p1':
         return <AddPost />;
+      case 'c':
+        return <SeeCustomer />;
       case 'a':
         break;
       case 'm':

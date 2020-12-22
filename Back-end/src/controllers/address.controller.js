@@ -31,7 +31,23 @@ const getDistrict = async (req, res, next) => {
   }
 };
 
+const getWardStreetList = async (req, res, next) => {
+  try {
+    const { id, district } = req.query;
+    const data = await AddressModel.findOne({ id }).select('districts -_id');
+    if (data) {
+      const result = data.districts.find((item) => item.id == district);
+      return res
+        .status(200)
+        .json({ wards: result.wards, streets: result.streets });
+    }
+  } catch (error) {
+    return res.status(400).json({ message: 'failed' });
+  }
+};
+
 module.exports = {
   getProvince,
   getDistrict,
+  getWardStreetList,
 };

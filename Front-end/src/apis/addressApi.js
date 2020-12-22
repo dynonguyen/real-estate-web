@@ -14,6 +14,14 @@ const addressApi = {
     const url = ADDRESS_API_ENDPOINT + '/district';
     return axiosClient.get(url, { params: { id: provinceId } });
   },
+
+  // api: lấy danh sách huyện/quận theo id tỉnh
+  getWardStreetList: (provinceId, districtId) => {
+    const url = ADDRESS_API_ENDPOINT + '/street';
+    return axiosClient.get(url, {
+      params: { id: provinceId, district: districtId },
+    });
+  },
 };
 
 export default addressApi;

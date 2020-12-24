@@ -46,12 +46,11 @@ const convertAddress = async (address) => {
       const proName = data.name;
 
       const dis = districts.find((item) => {
-        return item.id == district.toString();
+        return item.id === district.toString();
       });
 
       if (dis) {
         const disName = dis ? dis.name : '';
-
         const ward = dis.wards.find((item) => item.id == wards.toString());
         const wName = ward.prefix + ' ' + ward.name;
 
@@ -75,6 +74,7 @@ const convertAddress = async (address) => {
     }
     return result;
   } catch (error) {
+    console.log(error);
     return '';
   }
 };

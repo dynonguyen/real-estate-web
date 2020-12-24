@@ -28,7 +28,7 @@ function HomePage() {
         <HouseList title="Bất động sản nổi bật" />
       </Col>
 
-      {/* Danh sách Căn hộ chung cư */}
+      {/* Danh sách Căn hộ cao cấp */}
       <Col className="bg-white p-16 bor-rad-8 box-sha-home m-tb-32" span={24}>
         <DoubleBanner />
         <HouseList title="Căn hộ cao cấp" type={3} />

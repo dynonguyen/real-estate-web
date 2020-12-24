@@ -27,9 +27,7 @@ function EditHouseModal(props) {
   const onUpdateSucceed = () => {
     message.success('Cập nhật thành công', 2);
     setIsSubmitting(false);
-    setTimeout(() => {
-      location.reload();
-    }, 1);
+    onClose();
   };
 
   const onUpdate = async (data) => {

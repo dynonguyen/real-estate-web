@@ -1,0 +1,11 @@
+{ 
+    "_id" : ObjectId("5fe4560246ed2801c4fddc2e"), 
+    "birthday" : "2000-02-03", 
+    "gender" : true, 
+    "phone" : "", 
+    "address" : "Hồ Chí Minh", 
+    "avt" : "", 
+    "accountId" : ObjectId("5fe4560246ed2801c4fddc2d"), 
+    "fullName" : "Nguyễn Văn A", 
+    "__v" : NumberInt(0)
+}

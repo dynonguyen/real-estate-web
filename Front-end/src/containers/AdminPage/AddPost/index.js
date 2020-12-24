@@ -111,6 +111,7 @@ function AddPost() {
         price,
         square,
         province,
+        district,
         wards,
         street,
         addDetails,
@@ -130,7 +131,7 @@ function AddPost() {
         type,
         price,
         square,
-        address: { province, wards, street, details: addDetails },
+        address: { province, district, wards, street, details: addDetails },
       };
 
       const post = {
@@ -182,7 +183,7 @@ function AddPost() {
               size="large">
               {accountList.map((item, index) => (
                 <Option value={item._id} key={index}>
-                  {item.email}
+                  {item.fullName}
                 </Option>
               ))}
             </Select>

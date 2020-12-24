@@ -1,0 +1,182 @@
+{ 
+    "_id" : ObjectId("5fe4610765e9130443437b13"), 
+    "start" : ISODate("2020-12-02T09:34:55.776+0000"), 
+    "end" : ISODate("2020-12-16T09:34:57.250+0000"), 
+    "catalogs" : [
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/gui-em-hoa-Copy-1.jpg", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/42.JPG", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/91m-6b1.jpg"
+    ], 
+    "content" : "Tôi chính chủ cần cho thuê nhà văn phòng hướng Đông Bắc tại đường đôi Yên Phụ.\n\nNhà 8 tầng thêm một tầng hầm để xe. Vỉa hè rộng rãi. Là tuyến phố trung tâm, giao thông vô cùng thuận lợi (gần dốc Hòe Nhai). Phù hợp cho các công ty, doanh nghiệp chọn làm văn phòng giao dịch và làm việc.\n\n- Diện tích hiện trống:\n\n+ Tầng 1: Diện tích 160m2. Giá 33 triệu/tháng\n\n+ Tầng 2: Diện tích 21, 57, 75, 96 và 153m2: Giá 6 triệu, 8 triệu, 14 triệu, 18 triệu, 28 triệu/tháng\n\n+ Tầng 3: Diện tích 26, 65, 95 và 186m2 Tại tầng 3: Giá 6 triệu, 13,6 triệu, 19 triệu, 37 triệu/tháng\n\nSàn được trang bị các thiết bị văn phòng: Điều hoà âm trần, ánh sáng đạt chuẩn, sàn gạch, rèm cửa...\n\nTòa nhà có các tiện ích văn phòng đạt chuẩn:\n\n- Thang máy tốc độ cao.\n\n- Cơ sở viễn thông hiện đại và máy phát điện dự phòng công suất lớn.\n\n- Hệ thống PCCC tiêu chuẩn.\n\n- Điện nước ổn định.\n\n- View đẹp và thoáng với 12m mặt tiền.\n\n- Tầng hầm để xe.", 
+    "code" : "250182", 
+    "details" : [
+        {
+            "_id" : ObjectId("5fe4610765e9130443437b14"), 
+            "key" : "Số phòng tắm", 
+            "value" : "5"
+        }, 
+        {
+            "_id" : ObjectId("5fe4610765e9130443437b15"), 
+            "key" : "Tiện ích kèm theo", 
+            "value" : "1"
+        }
+    ], 
+    "houseId" : ObjectId("5fe4610765e9130443437b12"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe4628cc3cda404549bafb1"), 
+    "start" : ISODate("2020-12-02T09:34:55.776+0000"), 
+    "end" : ISODate("2020-12-16T09:34:57.250+0000"), 
+    "catalogs" : [
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/gui-em-hoa-Copy-1.jpg", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/42.JPG", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/91m-6b1.jpg"
+    ], 
+    "content" : "Tôi chính chủ cần cho thuê nhà văn phòng hướng Đông Bắc tại đường đôi Yên Phụ.\n\nNhà 8 tầng thêm một tầng hầm để xe. Vỉa hè rộng rãi. Là tuyến phố trung tâm, giao thông vô cùng thuận lợi (gần dốc Hòe Nhai). Phù hợp cho các công ty, doanh nghiệp chọn làm văn phòng giao dịch và làm việc.\n\n- Diện tích hiện trống:\n\n+ Tầng 1: Diện tích 160m2. Giá 33 triệu/tháng\n\n+ Tầng 2: Diện tích 21, 57, 75, 96 và 153m2: Giá 6 triệu, 8 triệu, 14 triệu, 18 triệu, 28 triệu/tháng\n\n+ Tầng 3: Diện tích 26, 65, 95 và 186m2 Tại tầng 3: Giá 6 triệu, 13,6 triệu, 19 triệu, 37 triệu/tháng\n\nSàn được trang bị các thiết bị văn phòng: Điều hoà âm trần, ánh sáng đạt chuẩn, sàn gạch, rèm cửa...\n\nTòa nhà có các tiện ích văn phòng đạt chuẩn:\n\n- Thang máy tốc độ cao.\n\n- Cơ sở viễn thông hiện đại và máy phát điện dự phòng công suất lớn.\n\n- Hệ thống PCCC tiêu chuẩn.\n\n- Điện nước ổn định.\n\n- View đẹp và thoáng với 12m mặt tiền.\n\n- Tầng hầm để xe.", 
+    "code" : "2501856", 
+    "details" : [
+        {
+            "_id" : ObjectId("5fe4628cc3cda404549bafb2"), 
+            "key" : "Số phòng tắm", 
+            "value" : "5"
+        }, 
+        {
+            "_id" : ObjectId("5fe4628cc3cda404549bafb3"), 
+            "key" : "Tiện ích kèm theo", 
+            "value" : "guitar"
+        }
+    ], 
+    "houseId" : ObjectId("5fe4628cc3cda404549bafb0"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe462f1c3cda404549bafb5"), 
+    "start" : ISODate("2020-12-02T09:34:55.776+0000"), 
+    "end" : ISODate("2020-12-16T09:34:57.250+0000"), 
+    "catalogs" : [
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/gui-em-hoa-Copy-1.jpg", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/42.JPG", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/91m-6b1.jpg"
+    ], 
+    "content" : "Tôi chính chủ cần cho thuê nhà văn phòng hướng Đông Bắc tại đường đôi Yên Phụ.\n\nNhà 8 tầng thêm một tầng hầm để xe. Vỉa hè rộng rãi. Là tuyến phố trung tâm, giao thông vô cùng thuận lợi (gần dốc Hòe Nhai). Phù hợp cho các công ty, doanh nghiệp chọn làm văn phòng giao dịch và làm việc.\n\n- Diện tích hiện trống:\n\n+ Tầng 1: Diện tích 160m2. Giá 33 triệu/tháng\n\n+ Tầng 2: Diện tích 21, 57, 75, 96 và 153m2: Giá 6 triệu, 8 triệu, 14 triệu, 18 triệu, 28 triệu/tháng\n\n+ Tầng 3: Diện tích 26, 65, 95 và 186m2 Tại tầng 3: Giá 6 triệu, 13,6 triệu, 19 triệu, 37 triệu/tháng\n\nSàn được trang bị các thiết bị văn phòng: Điều hoà âm trần, ánh sáng đạt chuẩn, sàn gạch, rèm cửa...\n\nTòa nhà có các tiện ích văn phòng đạt chuẩn:\n\n- Thang máy tốc độ cao.\n\n- Cơ sở viễn thông hiện đại và máy phát điện dự phòng công suất lớn.\n\n- Hệ thống PCCC tiêu chuẩn.\n\n- Điện nước ổn định.\n\n- View đẹp và thoáng với 12m mặt tiền.\n\n- Tầng hầm để xe.", 
+    "code" : "2501851", 
+    "details" : [
+        {
+            "_id" : ObjectId("5fe462f1c3cda404549bafb6"), 
+            "key" : "Số phòng tắm", 
+            "value" : "5"
+        }, 
+        {
+            "_id" : ObjectId("5fe462f1c3cda404549bafb7"), 
+            "key" : "Tiện ích kèm theo", 
+            "value" : "guitar"
+        }
+    ], 
+    "houseId" : ObjectId("5fe462f1c3cda404549bafb4"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe4636ac3cda404549bafb9"), 
+    "start" : ISODate("2020-12-02T09:34:55.776+0000"), 
+    "end" : ISODate("2020-12-16T09:34:57.250+0000"), 
+    "catalogs" : [
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/gui-em-hoa-Copy-1.jpg", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/42.JPG", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/91m-6b1.jpg"
+    ], 
+    "content" : "Tôi chính chủ cần cho thuê nhà văn phòng hướng Đông Bắc tại đường đôi Yên Phụ.\n\nNhà 8 tầng thêm một tầng hầm để xe. Vỉa hè rộng rãi. Là tuyến phố trung tâm, giao thông vô cùng thuận lợi (gần dốc Hòe Nhai). Phù hợp cho các công ty, doanh nghiệp chọn làm văn phòng giao dịch và làm việc.\n\n- Diện tích hiện trống:\n\n+ Tầng 1: Diện tích 160m2. Giá 33 triệu/tháng\n\n+ Tầng 2: Diện tích 21, 57, 75, 96 và 153m2: Giá 6 triệu, 8 triệu, 14 triệu, 18 triệu, 28 triệu/tháng\n\n+ Tầng 3: Diện tích 26, 65, 95 và 186m2 Tại tầng 3: Giá 6 triệu, 13,6 triệu, 19 triệu, 37 triệu/tháng\n\nSàn được trang bị các thiết bị văn phòng: Điều hoà âm trần, ánh sáng đạt chuẩn, sàn gạch, rèm cửa...\n\nTòa nhà có các tiện ích văn phòng đạt chuẩn:\n\n- Thang máy tốc độ cao.\n\n- Cơ sở viễn thông hiện đại và máy phát điện dự phòng công suất lớn.\n\n- Hệ thống PCCC tiêu chuẩn.\n\n- Điện nước ổn định.\n\n- View đẹp và thoáng với 12m mặt tiền.\n\n- Tầng hầm để xe.", 
+    "code" : "250185", 
+    "details" : [
+        {
+            "_id" : ObjectId("5fe4636ac3cda404549bafba"), 
+            "key" : "Số phòng tắm", 
+            "value" : "5"
+        }, 
+        {
+            "_id" : ObjectId("5fe4636ac3cda404549bafbb"), 
+            "key" : "Tiện ích kèm theo", 
+            "value" : "guitar"
+        }
+    ], 
+    "houseId" : ObjectId("5fe4636ac3cda404549bafb8"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe46398c3cda404549bafbd"), 
+    "start" : ISODate("2020-12-02T09:34:55.776+0000"), 
+    "end" : ISODate("2020-12-16T09:34:57.250+0000"), 
+    "catalogs" : [
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/gui-em-hoa-Copy-1.jpg", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/42.JPG", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/91m-6b1.jpg"
+    ], 
+    "content" : "Tôi chính chủ cần cho thuê nhà văn phòng hướng Đông Bắc tại đường đôi Yên Phụ.\n\nNhà 8 tầng thêm một tầng hầm để xe. Vỉa hè rộng rãi. Là tuyến phố trung tâm, giao thông vô cùng thuận lợi (gần dốc Hòe Nhai). Phù hợp cho các công ty, doanh nghiệp chọn làm văn phòng giao dịch và làm việc.\n\n- Diện tích hiện trống:\n\n+ Tầng 1: Diện tích 160m2. Giá 33 triệu/tháng\n\n+ Tầng 2: Diện tích 21, 57, 75, 96 và 153m2: Giá 6 triệu, 8 triệu, 14 triệu, 18 triệu, 28 triệu/tháng\n\n+ Tầng 3: Diện tích 26, 65, 95 và 186m2 Tại tầng 3: Giá 6 triệu, 13,6 triệu, 19 triệu, 37 triệu/tháng\n\nSàn được trang bị các thiết bị văn phòng: Điều hoà âm trần, ánh sáng đạt chuẩn, sàn gạch, rèm cửa...\n\nTòa nhà có các tiện ích văn phòng đạt chuẩn:\n\n- Thang máy tốc độ cao.\n\n- Cơ sở viễn thông hiện đại và máy phát điện dự phòng công suất lớn.\n\n- Hệ thống PCCC tiêu chuẩn.\n\n- Điện nước ổn định.\n\n- View đẹp và thoáng với 12m mặt tiền.\n\n- Tầng hầm để xe.", 
+    "code" : "124251", 
+    "details" : [
+        {
+            "_id" : ObjectId("5fe46398c3cda404549bafbe"), 
+            "key" : "Số phòng tắm", 
+            "value" : "5"
+        }, 
+        {
+            "_id" : ObjectId("5fe46398c3cda404549bafbf"), 
+            "key" : "Tiện ích kèm theo", 
+            "value" : "guitar"
+        }
+    ], 
+    "houseId" : ObjectId("5fe46398c3cda404549bafbc"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe463d2c3cda404549bafc1"), 
+    "start" : ISODate("2020-12-02T09:34:55.776+0000"), 
+    "end" : ISODate("2020-12-16T09:34:57.250+0000"), 
+    "catalogs" : [
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/gui-em-hoa-Copy-1.jpg", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/42.JPG", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/91m-6b1.jpg"
+    ], 
+    "content" : "Tôi chính chủ cần cho thuê nhà văn phòng hướng Đông Bắc tại đường đôi Yên Phụ.\n\nNhà 8 tầng thêm một tầng hầm để xe. Vỉa hè rộng rãi. Là tuyến phố trung tâm, giao thông vô cùng thuận lợi (gần dốc Hòe Nhai). Phù hợp cho các công ty, doanh nghiệp chọn làm văn phòng giao dịch và làm việc.\n\n- Diện tích hiện trống:\n\n+ Tầng 1: Diện tích 160m2. Giá 33 triệu/tháng\n\n+ Tầng 2: Diện tích 21, 57, 75, 96 và 153m2: Giá 6 triệu, 8 triệu, 14 triệu, 18 triệu, 28 triệu/tháng\n\n+ Tầng 3: Diện tích 26, 65, 95 và 186m2 Tại tầng 3: Giá 6 triệu, 13,6 triệu, 19 triệu, 37 triệu/tháng\n\nSàn được trang bị các thiết bị văn phòng: Điều hoà âm trần, ánh sáng đạt chuẩn, sàn gạch, rèm cửa...\n\nTòa nhà có các tiện ích văn phòng đạt chuẩn:\n\n- Thang máy tốc độ cao.\n\n- Cơ sở viễn thông hiện đại và máy phát điện dự phòng công suất lớn.\n\n- Hệ thống PCCC tiêu chuẩn.\n\n- Điện nước ổn định.\n\n- View đẹp và thoáng với 12m mặt tiền.\n\n- Tầng hầm để xe.", 
+    "code" : "1242511", 
+    "details" : [
+        {
+            "_id" : ObjectId("5fe463d2c3cda404549bafc2"), 
+            "key" : "Số phòng tắm", 
+            "value" : "5"
+        }, 
+        {
+            "_id" : ObjectId("5fe463d2c3cda404549bafc3"), 
+            "key" : "Tiện ích kèm theo", 
+            "value" : "guitar"
+        }
+    ], 
+    "houseId" : ObjectId("5fe463d2c3cda404549bafc0"), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe463eac3cda404549bafc5"), 
+    "start" : ISODate("2020-12-02T09:34:55.776+0000"), 
+    "end" : ISODate("2020-12-16T09:34:57.250+0000"), 
+    "catalogs" : [
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/gui-em-hoa-Copy-1.jpg", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/42.JPG", 
+        "http://cdn.batdongsan.vn/FileManager/Upload/03072020/91m-6b1.jpg"
+    ], 
+    "content" : "Tôi chính chủ cần cho thuê nhà văn phòng hướng Đông Bắc tại đường đôi Yên Phụ.\n\nNhà 8 tầng thêm một tầng hầm để xe. Vỉa hè rộng rãi. Là tuyến phố trung tâm, giao thông vô cùng thuận lợi (gần dốc Hòe Nhai). Phù hợp cho các công ty, doanh nghiệp chọn làm văn phòng giao dịch và làm việc.\n\n- Diện tích hiện trống:\n\n+ Tầng 1: Diện tích 160m2. Giá 33 triệu/tháng\n\n+ Tầng 2: Diện tích 21, 57, 75, 96 và 153m2: Giá 6 triệu, 8 triệu, 14 triệu, 18 triệu, 28 triệu/tháng\n\n+ Tầng 3: Diện tích 26, 65, 95 và 186m2 Tại tầng 3: Giá 6 triệu, 13,6 triệu, 19 triệu, 37 triệu/tháng\n\nSàn được trang bị các thiết bị văn phòng: Điều hoà âm trần, ánh sáng đạt chuẩn, sàn gạch, rèm cửa...\n\nTòa nhà có các tiện ích văn phòng đạt chuẩn:\n\n- Thang máy tốc độ cao.\n\n- Cơ sở viễn thông hiện đại và máy phát điện dự phòng công suất lớn.\n\n- Hệ thống PCCC tiêu chuẩn.\n\n- Điện nước ổn định.\n\n- View đẹp và thoáng với 12m mặt tiền.\n\n- Tầng hầm để xe.", 
+    "code" : "1242519", 
+    "details" : [
+        {
+            "_id" : ObjectId("5fe463eac3cda404549bafc6"), 
+            "key" : "Số phòng tắm", 
+            "value" : "5"
+        }, 
+        {
+            "_id" : ObjectId("5fe463eac3cda404549bafc7"), 
+            "key" : "Tiện ích kèm theo", 
+            "value" : "guitar"
+        }
+    ], 
+    "houseId" : ObjectId("5fe463eac3cda404549bafc4"), 
+    "__v" : NumberInt(0)
+}

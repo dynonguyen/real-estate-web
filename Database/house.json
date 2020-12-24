@@ -1,0 +1,126 @@
+{ 
+    "_id" : ObjectId("5fe4610765e9130443437b12"), 
+    "avt" : "http://cdn.batdongsan.vn/FileManager/Upload/03072020/gui-em-hoa-Copy-1.jpg", 
+    "isHire" : false, 
+    "type" : NumberInt(9), 
+    "price" : 13.5, 
+    "square" : NumberInt(65), 
+    "host" : ObjectId("5fe4560246ed2801c4fddc2e"), 
+    "title" : "20-500m2 vp tầng 1-3 cần cho thuê tại nhà vp 8 tầng số 62 đường đôi yên phụ. chính chủ, giá tốt, dv tốt. lh chủ nhà 0986646169", 
+    "address" : {
+        "province" : "1", 
+        "district" : "1", 
+        "wards" : "1", 
+        "street" : "9", 
+        "details" : "35/6"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe4628cc3cda404549bafb0"), 
+    "avt" : "http://cdn.batdongsan.vn/FileManager/Upload/12242020/z2241960485017a621b5824d1b78ee422ec3748aebda24-Copy-2.jpg", 
+    "isHire" : true, 
+    "type" : NumberInt(0), 
+    "price" : NumberInt(25), 
+    "square" : NumberInt(25), 
+    "host" : ObjectId("5fe4560246ed2801c4fddc2e"), 
+    "title" : "Bán cắt lỗ 25 tr/m2 full đồ 3 ngủ 126m2 chung cư the light tố hữu lh 0985409147", 
+    "address" : {
+        "province" : "2", 
+        "district" : "26", 
+        "wards" : "342", 
+        "street" : "7337", 
+        "details" : "54/1"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe462f1c3cda404549bafb4"), 
+    "avt" : "http://cdn.batdongsan.vn/FileManager/Upload/11252020/179292689714019.jpg", 
+    "isHire" : false, 
+    "type" : NumberInt(3), 
+    "price" : NumberInt(2800), 
+    "square" : NumberInt(158), 
+    "host" : ObjectId("5fe4560246ed2801c4fddc2e"), 
+    "title" : "Chính chủ cần vốn bán gấp căn hộ m1-18-13 (1pn=53,2m2), giá 2tỷ080", 
+    "address" : {
+        "province" : "1", 
+        "district" : "2", 
+        "wards" : "19", 
+        "street" : "552", 
+        "details" : "54/11"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe4636ac3cda404549bafb8"), 
+    "avt" : "http://cdn.batdongsan.vn/FileManager/Upload/11252020/362971489477458.jpg", 
+    "isHire" : true, 
+    "type" : NumberInt(2), 
+    "price" : NumberInt(280), 
+    "square" : NumberInt(158), 
+    "host" : ObjectId("5fe4560246ed2801c4fddc2e"), 
+    "title" : "Chính chủ cần vốn bán gấp căn hộ m1-18-13 (1pn=53,2m2), giá 2tỷ080", 
+    "address" : {
+        "province" : "1", 
+        "district" : "2", 
+        "wards" : "19", 
+        "street" : "552", 
+        "details" : "54/11"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe46398c3cda404549bafbc"), 
+    "avt" : "http://cdn.batdongsan.vn/FileManager/Upload/12242020/z205571072742850888e339679e87e265cb43693ee4d46.jpg", 
+    "isHire" : true, 
+    "type" : NumberInt(4), 
+    "price" : NumberInt(28), 
+    "square" : NumberInt(158), 
+    "host" : ObjectId("5fe4560246ed2801c4fddc2e"), 
+    "title" : "Chính chủ cần vốn bán gấp căn hộ m1-18-13 (1pn=53,2m2), giá 2tỷ080", 
+    "address" : {
+        "province" : "1", 
+        "district" : "2", 
+        "wards" : "19", 
+        "street" : "552", 
+        "details" : "54/11"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe463d2c3cda404549bafc0"), 
+    "avt" : "http://cdn.batdongsan.vn/FileManager/Upload/12242020/z205571072742850888e339679e87e265cb43693ee4d46.jpg", 
+    "isHire" : true, 
+    "type" : NumberInt(5), 
+    "price" : NumberInt(28), 
+    "square" : NumberInt(158), 
+    "host" : ObjectId("5fe4560246ed2801c4fddc2e"), 
+    "title" : "Chính chủ cần vốn bán gấp căn hộ m1-18-13 (1pn=53,2m2), giá 2tỷ080", 
+    "address" : {
+        "province" : "1", 
+        "district" : "2", 
+        "wards" : "19", 
+        "street" : "552", 
+        "details" : "54/11"
+    }, 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("5fe463eac3cda404549bafc4"), 
+    "avt" : "http://cdn.batdongsan.vn/FileManager/Upload/12242020/z205571072742850888e339679e87e265cb43693ee4d46.jpg", 
+    "isHire" : true, 
+    "type" : NumberInt(8), 
+    "price" : NumberInt(28), 
+    "square" : NumberInt(158), 
+    "host" : ObjectId("5fe4560246ed2801c4fddc2e"), 
+    "title" : "Chính chủ cần vốn bán gấp căn hộ m1-18-13 (1pn=53,2m2), giá 2tỷ080", 
+    "address" : {
+        "province" : "1", 
+        "district" : "2", 
+        "wards" : "19", 
+        "street" : "552", 
+        "details" : "54/11"
+    }, 
+    "__v" : NumberInt(0)
+}

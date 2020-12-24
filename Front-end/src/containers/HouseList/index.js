@@ -10,7 +10,7 @@ function HouseList(props) {
   const [isLoading, setIsLoading] = useState(true);
   const [list, setList] = useState([]);
   const span = isDouble
-    ? { span: 24, xs: 24, sm: 12, md: 12, lg: 12, xl: 8, xxl: 8 }
+    ? { span: 24, xs: 24, sm: 12, md: 12, lg: 12, xl: 12, xxl: 12 }
     : { span: 24, xs: 24, sm: 12, md: 8, lg: 6, xl: 6, xxl: 6 };
 
   // Lấy ds nhà

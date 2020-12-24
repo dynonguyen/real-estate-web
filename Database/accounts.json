@@ -1,0 +1,10 @@
+{ 
+    "_id" : ObjectId("5fe4560246ed2801c4fddc2d"), 
+    "password" : "$2a$10$yILse28Yh7q/rPmO2ActdOm.82/RDy/2Xp0dQdx4KbVNEKz8cDFR2", 
+    "googleId" : null, 
+    "authType" : "local", 
+    "failedLoginTimes" : NumberInt(0), 
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0ZW4tbmd1b2ktdGFvLWtleSAoKikiLCJzdWIiOnsiYWNjb3VudElEIjoiNWZlNDU2MDI0NmVkMjgwMWM0ZmRkYzJkIiwia2VlcExvZ2luIjp0cnVlfSwiaWF0IjoxNjA4Nzk5NzU0LCJleHAiOjE2MjQzNTE3NTR9.yZqzJ3jIkOCjlBqBwq3yvMlgHhuGgTmo0uZkoG-CdEo", 
+    "email" : "tuannguyentn2504@gmail.com", 
+    "__v" : NumberInt(0)
+}

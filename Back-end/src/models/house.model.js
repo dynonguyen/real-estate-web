@@ -28,10 +28,10 @@ const houseSchema = new Schema({
   address: {
     type: Object,
     required: true,
-    province: Number,
-    district: Number,
-    wards: Number,
-    street: Number,
+    province: String,
+    district: String,
+    wards: String,
+    street: String,
     details: { type: String, default: '' },
   },
 });

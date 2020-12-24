@@ -1,13 +1,19 @@
-  <h1 align="center"><b>Website Bất Động Sản</b></h1>
+  <h1 align="center"><b>Project Website Bất Động Sản</b></h1>
+  <h3 align="center"><b>Dự án freelance đầu tiên</b></h1>
+
+- Ngày bắt đầu: 19/12/2020
+- Ngày kết thúc: 22/12/2020
+- Giá cho dự án: 1.000.000đ
 
 - ## ✨ **Tính năng**
 
   - Show các nhà nổi bật...
-  - Tìm kiếm, lọc nhà theo yêu cầu người dùng.
+  - Tìm kiếm, lọc nhà theo tỉnh thành và yêu cầu người dùng.
   - Hiển thị chi tiết nhà và đề xuất các nhà liên quan.
   - Cho phép người dùng mua nhà.
   - Đăng ký, đăng nhập.
   - Quản lý tài khoản người dùng
+  - Admin page xem, thêm, xoá, sửa sản phẩm, tài khoản.
 
 - ## ⌨️ **Công nghệ sử dụng trong project**
 
@@ -22,7 +28,7 @@
     - Xây dựng UI với Ant Design, Css, Scss.
     - Build project với Webpack.
     - Restful API với Axios.
-  - ### **Tool Team Work**
+  - ### **Version Control**
     - Git, Github.
     - Eslint, EditorConfig, Jsconfig.
     - IDE: Visual Studio Code.

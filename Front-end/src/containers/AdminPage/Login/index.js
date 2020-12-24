@@ -23,7 +23,7 @@ function Login(props) {
     <Form name="form" onFinish={onFinish}>
       <Form.Item
         label="Username"
-        name="username"
+        name="userName"
         rules={[{ required: true, message: 'Please input your username!' }]}>
         <Input />
       </Form.Item>

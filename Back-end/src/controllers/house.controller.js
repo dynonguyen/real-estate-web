@@ -33,6 +33,7 @@ const getHouse = async (req, res, next) => {
     const house = await HouseModel.findById(id);
     if (house) {
       const { address } = house;
+      console.log(address);
       let result = house;
       result.address = await helpers.convertAddress(address);
       return res.status(200).json(result);

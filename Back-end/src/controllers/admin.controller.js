@@ -7,8 +7,8 @@ const PostModel = require('../models/post.model');
 
 const postLogin = async (req, res, next) => {
   try {
-    const { username, password } = req.body;
-    const user = await AdminModel.findOne({ username, password });
+    const { userName, password } = req.body;
+    const user = await AdminModel.findOne({ userName, password });
     if (user) {
       return res.status(200).json({ name: user.name });
     }
@@ -42,7 +42,7 @@ const deleteHouse = async (req, res, next) => {
   try {
     const { _id } = req.query;
     const isDel = await HouseModel.deleteOne({ _id });
-    console.log(isDel);
+    const delPost = await PostModel.deleteOne({ houseId: _id });
     if (isDel && isDel.deletedCount) {
       return res.status(200).send('success');
     }
@@ -80,7 +80,7 @@ const getAllCustomer = async (req, res, next) => {
 
 const getAccountList = async (req, res, next) => {
   try {
-    const list = await AccountModel.find({}).select('email _id');
+    const list = await UserModel.find({}).select('fullName _id');
     if (list) {
       return res.status(200).json(list);
     }
@@ -92,6 +92,7 @@ const getAccountList = async (req, res, next) => {
 const postAddHouse = async (req, res, next) => {
   try {
     const { house, post } = req.body;
+    console.log(house);
     const isExistPost = await PostModel.exists({ code: post.code });
     if (isExistPost)
       return res.status(409).json({ message: 'Mã bài đăng đã tồn tại' });

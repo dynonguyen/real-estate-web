@@ -36,12 +36,13 @@ function HouseListView(props) {
     const listSliced = paginate(list);
 
     return listSliced.map((house, index) => {
-      const { type, title, avt, price, square, address, _id } = house;
+      const { isHire, title, avt, price, square, address, _id } = house;
+
       return (
         <Col key={index} {...span}>
           <Link to={`${constants.ROUTES.HOUSE}/${_id}`} className="item">
             <HouseView
-              type={type ? true : false}
+              type={isHire}
               title={title}
               avt={avt}
               price={price}

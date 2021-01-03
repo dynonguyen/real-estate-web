@@ -66,11 +66,15 @@ const menuList = [
 ];
 
 function AdminPage() {
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(() => {
+    const admin = localStorage.getItem('admin');
+    return admin ? true : false;
+  });
   const [keyMenu, setKeyMenu] = useState('p0');
   const [userName, setUserName] = useState('Admin');
   const onLogin = (isLogin, name) => {
     if (isLogin) {
+      localStorage.setItem('admin', true);
       setIsLogin(isLogin);
       setUserName(name);
     }

@@ -1,10 +1,6 @@
   <h1 align="center"><b>Project Website Bất Động Sản</b></h1>
   <h3 align="center"><b>Dự án freelance đầu tiên</b></h1>
 
-- Ngày bắt đầu: 19/12/2020
-- Ngày kết thúc: 22/12/2020
-- Giá cho dự án: 1.000.000đ
-
 - ## ✨ **Tính năng**
 
   - Show các nhà nổi bật...

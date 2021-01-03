@@ -17,6 +17,7 @@ const jwtAuthentication = async (req, res, next) => {
     //verify jwt
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
     if (decoded) {
+      console.log(decoded.sub);
       const { accountId } = decoded.sub;
       const user = await AccountModel.findById(accountId);
       if (user) {
@@ -45,6 +46,7 @@ passport.use(
         const { id, name } = profile;
         const { familyName, givenName } = name;
         const email = profile.emails[0].value;
+
         // kiểm tra email đã tồn tại hay chưa
         const localUser = await AccountModel.findOne({
           email,

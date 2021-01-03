@@ -33,7 +33,6 @@ const getHouse = async (req, res, next) => {
     const house = await HouseModel.findById(id);
     if (house) {
       const { address } = house;
-      console.log(address);
       let result = house;
       result.address = await helpers.convertAddress(address);
       return res.status(200).json(result);
@@ -71,18 +70,20 @@ const filterHouse = async (req, res, next) => {
 
     // tỉnh thành
     if (conditions.hasOwnProperty('province')) {
+      // query.address = {};
+      // query.address.province = conditions.province;
       const province = {};
-      province['address.province'] = parseInt(conditions.province);
+      province['address.province'] = conditions.province;
       Object.assign(query, province);
     }
 
     // huyện, quận
     if (conditions.hasOwnProperty('district')) {
+      // query.address.district = conditions.district;
       const district = {};
-      district['address.district'] = parseInt(conditions.district);
+      district['address.district'] = conditions.district;
       Object.assign(query, district);
     }
-    // return res.status(200).json(query);
 
     // query and paginate
     const skip = (parseInt(page) - 1) * parseInt(perPage);

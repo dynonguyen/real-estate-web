@@ -1,1 +1,0 @@
-Dữ liệu tất cả tỉnh thành ở Việt Nam để làm dữ liệu query cho project.

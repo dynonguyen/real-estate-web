@@ -36,7 +36,7 @@ function FilterPage() {
     return () => {
       isSubscribe = false;
     };
-  }, [page]);
+  }, [page, params]);
 
   return (
     <div className="container m-tb-32" style={{ minHeight: '100vh' }}>

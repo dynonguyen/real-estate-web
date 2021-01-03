@@ -77,9 +77,7 @@ function Description(props) {
           <div className="item d-flex justify-content-between m-b-12">
             <h3 className="key font-size-18px">Giá cả</h3>
             <span className="value font-size-16px p-tb-4 p-lr-8 price bor-rad-6">
-              {price
-                ? `${price} ${isHire ? ' Tỷ' : ' Triệu/tháng'}`
-                : 'Thoả thuận'}
+              {helpers.convertPrice(price, isHire)}
             </span>
           </div>
 

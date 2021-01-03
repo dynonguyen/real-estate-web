@@ -19,12 +19,7 @@ function HomeView(props) {
     maxWidth,
   } = props;
 
-  const priceRender =
-    price > 0
-      ? type
-        ? `${price.toFixed(2)} Tr/th`
-        : `${(price / 1000).toFixed(2)} Tỷ`
-      : 'Thoả thuận';
+  const priceRender = helpers.convertPrice(price, type);
 
   // set height cho các avt của nhà
   useEffect(() => {

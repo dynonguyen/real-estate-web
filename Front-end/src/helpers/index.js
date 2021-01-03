@@ -43,9 +43,31 @@ function getQueryVariable(query) {
   return result;
 }
 
+// fn: convert price
+function convertPrice(price = 0, type = 0) {
+  if (price <= 0) return 'Thoả thuận';
+  let priceStr = type ? price.toFixed(3) : (price / 1000).toFixed(6);
+  let result = priceStr;
+  // xoá những số 0 dư thừa sau dấu '.'
+  if (priceStr.indexOf('.') !== -1) {
+    for (let i = priceStr.length - 1; i >= 1; --i) {
+      if (priceStr[i] === '0') {
+        result = result.slice(0, i);
+      } else {
+        break;
+      }
+    }
+  }
+
+  if (result.indexOf('.') === result.length - 1)
+    result = result.slice(0, result.length - 1);
+  return type ? result + ' Tr/th' : result + ' Tỷ';
+}
+
 export default {
   convertWidthScreen,
   reduceName,
   formatTime,
   getQueryVariable,
+  convertPrice,
 };

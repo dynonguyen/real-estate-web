@@ -120,7 +120,7 @@ function SeeHouse() {
   ];
 
   // event: Lấy danh sách sản phẩm
-  useEffect(() => {
+  useEffect(() => { 
     let isSubscribe = true;
     async function getList() {
       try {

@@ -1,6 +1,5 @@
   <h1 align="center"><b>Project Website Bất Động Sản</b></h1>
-  <h3 align="center"><b>Dự án freelance đầu tiên</b></h1>
-
+ 
 - ## ✨ **Tính năng**
 
   - Show các nhà nổi bật...
